@@ -1,0 +1,7 @@
+django
+psycopg2
+graphene_django
+graphene
+python-decouple
+python-dotenv
+django-cors-headers

@@ -1,0 +1,89 @@
+version: "3.6"
+   
+
+services:
+  db:
+    container_name: data-collection-pg-database-backend
+    image: 'postgres'
+    stop_signal: SIGTERM
+    stop_grace_period: 20s # https://docs.docker.com/compose/compose-file/compose-file-v2/#stop_grace_period
+    ports:
+      - '5432'
+    environment:
+      POSTGRES_USER: ${DB_USER:-dcpuser}
+      POSTGRES_DB: ${DB_NAME:-dcp}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-dcp}
+      POSTGRES_HOST_AUTH_METHOD: trust
+      PGUSER: postgres
+
+  pgadmin:
+    container_name: data-collection-pgadmin
+    build: 
+      context: .
+      dockerfile: Dockerfile-pgadmin
+      args:
+        DB_NAME: ${DB_NAME}
+        DB_USER: ${DB_USER}
+        DB_PASSWORD: ${DB_PASSWORD}
+        DB_HOST: ${DB_HOST}
+        DB_PORT: ${DB_PORT}
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_LISTEN_PORT: ${PGADMIN_LISTEN_PORT}
+      PGADMIN_CONFIG_SERVER_MODE: ${PGADMIN_CONFIG_SERVER_MODE}
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: ${PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED}
+      PGADMIN_CONFIG_UPGRADE_CHECK_ENABLED: ${PGADMIN_CONFIG_UPGRADE_CHECK_ENABLED}
+    ports:
+      - "5433:5433"
+    depends_on:
+      - db
+      
+  core:
+    container_name: data-collection-django-core
+    build:
+      context: .
+      dockerfile: Dockerfile-backend
+    command: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=db
+      - DB_PORT=${DB_PORT}
+      - DATABASE=postgres
+      - SECRET_KEY=${SECRET_KEY}
+      - DEBUG=${DEBUG}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+    links:
+      - db:db
+
+  frontend:
+    stdin_open: true
+    container_name: data-collection-react-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - "/app/node_modules"
+      - "./frontend/:/app"
+    depends_on:
+      - db
+      
+networks:
+  default:
+    name: nunet
+
+volumes:
+  # these are named volumes without a specific binding reference, which allows the services above to provide the binding reference
+  postgres_data:
+  static_volume:
+  media_volume:
