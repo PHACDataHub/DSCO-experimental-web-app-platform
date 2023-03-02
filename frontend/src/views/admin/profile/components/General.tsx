@@ -17,17 +17,18 @@ export default function GeneralInformation(props: { [x: string]: any }) {
 				General Information
 			</Text>
 			<Text color={textColorSecondary} fontSize='md' me='26px' mb='40px'>
-				As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted
-				by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give
-				others a hand. We get our heart broken by people we love, even that we give them all...
+				Ben is a full-stack developer on the DSCO / Data Enablement team where he is
+        the lead developer on the DSCO-webapp. This webapp is looking to solve the problem
+        of having many teams and people not knowing where to start where they want to start
+        developing, storing, and presenting their data/information to internal partners.
 			</Text>
 			<SimpleGrid columns={2} gap='20px'>
-				<Information boxShadow={cardShadow} title='Education' value='Stanford University' />
-				<Information boxShadow={cardShadow} title='Languages' value='English, Spanish, Italian' />
-				<Information boxShadow={cardShadow} title='Department' value='Product Design' />
-				<Information boxShadow={cardShadow} title='Work History' value='Google, Facebook' />
-				<Information boxShadow={cardShadow} title='Organization' value='Simmmple Web LLC' />
-				<Information boxShadow={cardShadow} title='Birthday' value='20 July 1986' />
+				<Information boxShadow={cardShadow} title='Organization' value='Public Health Agency of Canada (PHAC)' />
+				<Information boxShadow={cardShadow} title='Department' value='Data Management, Innovation and Analytics (DMIA)' />
+				<Information boxShadow={cardShadow} title='Education' value='Carleton University' />
+				<Information boxShadow={cardShadow} title='Languages' value='English, Croatian' />
+				<Information boxShadow={cardShadow} title='Personal Interests' value='Gaming, Coding, Swimming, Dancing' />
+				<Information boxShadow={cardShadow} title='Birthday' value='15 Nov 1993' />
 			</SimpleGrid>
 		</Card>
 	);

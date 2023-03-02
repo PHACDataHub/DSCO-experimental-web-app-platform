@@ -1,24 +1,24 @@
 version: "3.6"
-   
+
 
 services:
   db:
-    container_name: data-collection-pg-database-backend
+    container_name: wap-backend-pg-database
     image: 'postgres'
     stop_signal: SIGTERM
     stop_grace_period: 20s # https://docs.docker.com/compose/compose-file/compose-file-v2/#stop_grace_period
     ports:
       - '5432'
     environment:
-      POSTGRES_USER: ${DB_USER:-dcpuser}
-      POSTGRES_DB: ${DB_NAME:-dcp}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-dcp}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_HOST_AUTH_METHOD: trust
       PGUSER: postgres
 
   pgadmin:
-    container_name: data-collection-pgadmin
-    build: 
+    container_name: wap-pgadmin
+    build:
       context: .
       dockerfile: Dockerfile-pgadmin
       args:
@@ -38,9 +38,9 @@ services:
       - "5433:5433"
     depends_on:
       - db
-      
+
   core:
-    container_name: data-collection-django-core
+    container_name: wap-core-django
     build:
       context: .
       dockerfile: Dockerfile-backend
@@ -49,7 +49,7 @@ services:
       - DB_NAME=${DB_NAME}
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
-      - DB_HOST=db
+      - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT}
       - DATABASE=postgres
       - SECRET_KEY=${SECRET_KEY}
@@ -66,7 +66,7 @@ services:
 
   frontend:
     stdin_open: true
-    container_name: data-collection-react-frontend
+    container_name: wap-frontend-react
     build:
       context: .
       dockerfile: Dockerfile-frontend
@@ -77,7 +77,7 @@ services:
       - "./frontend/:/app"
     depends_on:
       - db
-      
+
 networks:
   default:
     name: nunet

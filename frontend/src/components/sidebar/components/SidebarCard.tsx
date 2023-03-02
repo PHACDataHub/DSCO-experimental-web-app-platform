@@ -1,4 +1,4 @@
-import { Button, Flex, Image, Link, Text, useColorModeValue } from '@chakra-ui/react';
+import { Button, Flex, HStack, Image, Link, Text, useColorModeValue, VStack } from '@chakra-ui/react';
 import logoWhite from 'assets/img/layout/logoWhite.png';
 
 export default function SidebarDocs() {
@@ -14,23 +14,7 @@ export default function SidebarDocs() {
 			borderRadius='30px'
 			me={{ base: '20px' }}
 			position='relative'>
-			<Flex
-				border='5px solid'
-				borderColor={borderColor}
-				bg='linear-gradient(135deg, #868CFF 0%, #4318FF 100%)'
-				borderRadius='50%'
-				w='94px'
-				h='94px'
-				align='center'
-				justify='center'
-				mx='auto'
-				position='absolute'
-				left='50%'
-				top='-47px'
-				transform='translate(-50%, 0%)'>
-				<Image src={logoWhite} w='40px' h='40px' />
-			</Flex>
-			<Flex direction='column' mb='12px' align='center' justify='center' px='15px' pt='55px'>
+			<Flex direction='column' mb='12px' align='center' justify='center' px='15px' pt='40px'>
 				<Text
 					fontSize={{ base: 'lg', xl: '18px' }}
 					color='white'
@@ -39,26 +23,57 @@ export default function SidebarDocs() {
 					textAlign='center'
 					px='10px'
 					mb='14px'>
-					Upgrade to PRO
+					Thanks for using the
+          DSCO-webapp
 				</Text>
 				<Text fontSize='14px' color={'white'} px='10px' mb='14px' textAlign='center'>
-					Improve your development process and start doing more with Horizon UI PRO!
+					Check out the following links to see all the things that this webapp can offer you!
 				</Text>
 			</Flex>
-			<Link href='https://horizon-ui.com/pro'>
-				<Button
-					bg='whiteAlpha.300'
-					_hover={{ bg: 'whiteAlpha.200' }}
-					_active={{ bg: 'whiteAlpha.100' }}
-					mb={{ sm: '16px', xl: '24px' }}
-					color={'white'}
-					fontWeight='regular'
-					fontSize='sm'
-					minW='185px'
-					mx='auto'>
-					Upgrade to PRO
-				</Button>
-			</Link>
+      <VStack spacing={-3}>
+        <Link href='http://localhost:8000/admin'>
+          <Button
+            bg='whiteAlpha.300'
+            _hover={{ bg: 'whiteAlpha.200' }}
+            _active={{ bg: 'whiteAlpha.100' }}
+            mb={{ sm: '16px', xl: '24px' }}
+            color={'white'}
+            fontWeight='regular'
+            fontSize='sm'
+            minW='185px'
+            mx='auto'>
+            Django Admin Portal
+          </Button>
+        </Link>
+        <Link href='http://localhost:8000/graphql'>
+          <Button
+            bg='whiteAlpha.300'
+            _hover={{ bg: 'whiteAlpha.200' }}
+            _active={{ bg: 'whiteAlpha.100' }}
+            mb={{ sm: '16px', xl: '24px' }}
+            color={'white'}
+            fontWeight='regular'
+            fontSize='sm'
+            minW='185px'
+            mx='auto'>
+            GraphQL API End-point
+          </Button>
+        </Link>
+        <Link href='http://localhost:5433/browser'>
+          <Button
+            bg='whiteAlpha.300'
+            _hover={{ bg: 'whiteAlpha.200' }}
+            _active={{ bg: 'whiteAlpha.100' }}
+            mb={{ sm: '16px', xl: '24px' }}
+            color={'white'}
+            fontWeight='regular'
+            fontSize='sm'
+            minW='185px'
+            mx='auto'>
+            PgAdmin / PostgreSQL
+          </Button>
+        </Link>
+      </VStack>
 		</Flex>
 	);
 }
