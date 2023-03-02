@@ -1,14 +1,24 @@
-# **Coding Challenge**
+v
 To build a complete full-stack application template to be used in various projects
 
 # TODO
+
 Get a 'new' front-end that uses TSX rather than JS
 
 # What is being done in the newest change
+
 Actions should be working as intended now
 
 Method 1:
+
 ## Setting up using Docker
+
+First you can validate that your developer environment satisfies all the requirements for running this project using docker by running the following command in the base directory of this project
+
+```bash
+./check_dev.sh
+```
+
 Note: Below steps may take some time
 
     docker-compose up -d
@@ -27,10 +37,10 @@ Note: Below steps may take some time
 
     Django server url: http://127.0.0.1:8000/graphql/  <br />
     React frontend url: http://localhost:3000/
-    
-    
+
 ######################################################################
 Method 2:
+
 ## Setting up Python environment
 
 To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with <br />
@@ -75,10 +85,7 @@ sudo apt-get install libpq-dev python-dev
 sudo apt-get install postgresql postgresql-contrib
 ```
 
-
-
 ### Setup Database and User in PostgreSQL
-
 
 ```python
 DATABASES = {
@@ -92,12 +99,12 @@ DATABASES = {
 }
 ```
 
-
 ```SQL
 grant all privileges on database postgres to postgres
 ```
 
 ## Setting up Python environment
+
 <br />
 
 ```
