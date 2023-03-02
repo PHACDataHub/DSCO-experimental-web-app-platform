@@ -6,9 +6,6 @@ __pycache__/
 # C extensions
 *.so
 
-# Fixtures initial data
-Fixtures/
-
 # Distribution / packaging
 .Python
 build/
