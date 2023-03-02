@@ -29,9 +29,9 @@ export default function Footer() {
 				{' '}
 				&copy; {new Date().getFullYear()}
 				<Text as='span' fontWeight='500' ms='4px'>
-					Horizon UI. All Rights Reserved. Made with love by
-					<Link mx='3px' color={textColor} href='https://www.simmmple.com' target='_blank' fontWeight='700'>
-						Simmmple!
+					DSCO-webapp. Made with love by
+					<Link mx='3px' color={textColor} href='https://github.com/PHACDataHub/DSCO-projects' target='_blank' fontWeight='700'>
+            the Data Enablement Team!
 					</Link>
 				</Text>
 			</Text>
@@ -41,8 +41,8 @@ export default function Footer() {
 						base: '20px',
 						md: '44px'
 					}}>
-					<Link fontWeight='500' color={linkColor} href='mailto:hello@simmmple.com'>
-						Support
+					<Link fontWeight='500' color={linkColor} href='https://github.com/PHACDataHub/web-app-platform/discussions/categories/q-a'>
+						GitHub Q&A
 					</Link>
 				</ListItem>
 				<ListItem
@@ -50,22 +50,13 @@ export default function Footer() {
 						base: '20px',
 						md: '44px'
 					}}>
-					<Link fontWeight='500' color={linkColor} href='https://www.simmmple.com/licenses'>
-						License
-					</Link>
-				</ListItem>
-				<ListItem
-					me={{
-						base: '20px',
-						md: '44px'
-					}}>
-					<Link fontWeight='500' color={linkColor} href='https://simmmple.com/terms-of-service'>
-						Terms of Use
+					<Link fontWeight='500' color={linkColor} href='https://github.com/PHACDataHub/web-app-platform'>
+						GitHub Repo
 					</Link>
 				</ListItem>
 				<ListItem>
-					<Link fontWeight='500' color={linkColor} href='https://www.blog.simmmple.com/'>
-						Blog
+					<Link fontWeight='500' color={linkColor} href='https://github.com/PHACDataHub/web-app-platform/wiki'>
+						GitHub Wiki
 					</Link>
 				</ListItem>
 			</List>

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'graphene_django',     
+    'graphene_django',
     'backend',
 ]
 
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 FIXTURE_DIRS = (
-   '/react-django-graphQL-postgres/Fixtures/',
+   '/web-app-platform/Fixtures/',
 )
 
 
