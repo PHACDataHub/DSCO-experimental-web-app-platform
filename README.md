@@ -14,9 +14,10 @@ We are trying to solve this issue by providing a full-stack application that be 
 ## Method 1: Setting up using GitHub Codespaces
 
 ### Get the Codespace up
-![Codespace initial button](https://github.com/PHACDataHub/web-app-platform/blob/main/README-imgs/Codespace-1.PNG)
+Create your GitHub Codespace by clicking the following two buttons in order!
+Button 1: ![Codespace initial button](https://github.com/PHACDataHub/web-app-platform/blob/main/README-imgs/Codespace-1.PNG)
 
-![Codespace second button](https://github.com/PHACDataHub/web-app-platform/blob/main/README-imgs/Codespace-2.PNG)
+Button 2: ![Codespace second button](https://github.com/PHACDataHub/web-app-platform/blob/main/README-imgs/Codespace-2.PNG)
 
 ### Provide persmissions for scripts to run
 Wait for the Codespace to fully set up and do it's thing. 
