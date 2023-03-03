@@ -1,47 +1,23 @@
-v
-To build a complete full-stack application template to be used in various projects
+# DISCLAIMER
 
-# TODO
+This project is under heavy development and is not by any means, complete. There are many aspects of the project that may not currently work and/or does not directly reflect the technologies that the government has, currently, or will use.
 
-Get a 'new' front-end that uses TSX rather than JS
 
-# What is being done in the newest change
+## Problem statement that we are trying to solve
 
-Actions should be working as intended now
+There is a lack of 'starting points' for developers to create full-stack internal applications and therefore the code quality, standardization, optimization, and efficiency are all drastically reduced.
 
-Method 1:
+We are trying to solve this issue by providing a full-stack application that be be deployed easily and modularity while still having separated components to allow development on smaller portions of the application at a time.
 
-## Setting up using Docker
+# Getting Started
 
-First you can validate that your developer environment satisfies all the requirements for running this project using docker by running the following command in the base directory of this project
+## Method 1: Setting up using GitHub Codespaces
 
-```bash
-./check_dev.sh
-```
+> insert information here
 
-Note: Below steps may take some time
+## Method 2: Setting up locally using Docker
 
-    docker-compose up -d
-
-    docker ps
-
-    <!-- Login to react-django-graphql-postgres_core image -->
-
-    docker exec -it ####### /bin/bash
-
-    python manage.py makemigrations
-
-    python manage.py migrate
-
-    python manage.py loaddata ./Fixtures/initial_data.json
-
-    Django server url: http://127.0.0.1:8000/graphql/  <br />
-    React frontend url: http://localhost:3000/
-
-######################################################################
-Method 2:
-
-## Setting up Python environment
+### Setting up Python environment
 
 To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with <br />
 
@@ -67,50 +43,29 @@ Then install the project dependencies with
 pip install -r requirements.txt
 ```
 
-Now you can run the project with this command
+### Validate environment
+First you can validate that your developer environment satisfies all the requirements for running this project using docker by running the following command in the base directory of this project
 
-```
-python manage.py runserver
-```
-
-## Setting up postgresql database
-
-### Install Postgresql **_Linux_**
-
-```
-sudo apt-get install libpq-dev python-dev
+```bash
+./check-dev.sh
 ```
 
-```
-sudo apt-get install postgresql postgresql-contrib
-```
+### Start and deploy containers
 
-### Setup Database and User in PostgreSQL
-
-```python
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres,
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "db"
-    }
-}
+```bash
+docker compose up --build -d
 ```
 
-```SQL
-grant all privileges on database postgres to postgres
-```
+### Check out containers!
 
-## Setting up Python environment
+Chakra UI React frontend
+> http://localhost:3000/
 
-<br />
+GraphiQL backend UI
+> http://localhost:8000/graphql/
 
-```
-cd frontend
+Django admin page (default superuser login credentials = admin : password)
+> http://localhost:8000/admin/
 
-npm install
-
-npm start
-```
+pgAdmin UI
+> http://localhost:5433/browser/
