@@ -1,9 +1,6 @@
 **/node_modules
 **/build
+Dockerfile
 .dockerignore
 .env
-Dockerfile-frontend 
-Dockerfile-backend
-Dockerfile-pgadmin
-dbsamples-0.1 
 *.md

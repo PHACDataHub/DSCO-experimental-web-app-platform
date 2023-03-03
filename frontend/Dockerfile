@@ -1,11 +1,11 @@
-# Installing Frontend 
+# Installing Frontend
 FROM node:current-alpine3.16
 WORKDIR /app
-COPY ./frontend/package.json /app
+COPY ./package.json /app
 ENV NODE_ENV='development'
 ENV WDS_SOCKET_PORT=3000
 ENV CHOKIDAR_USEPOLLING=true
 ENV WATCHPACK_POLLING=true
 RUN npm install
-COPY ./frontend /app
+COPY . /app
 CMD ["npm", "start"]

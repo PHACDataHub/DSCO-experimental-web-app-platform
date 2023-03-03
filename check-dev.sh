@@ -12,7 +12,9 @@ commandRequired docker
 commandRequired docker-compose
 
 # check that required env file(s) exist
-fileExists .env
+fileExists ./core-api/core-api.env
+fileExists ./database/database.env
+fileExists ./pgAdmin/pgAdmin.env
 # when we refactor the local env files...
 # and either generate them of validate them,...
 # fileExists ./env/local/pgadmin.env

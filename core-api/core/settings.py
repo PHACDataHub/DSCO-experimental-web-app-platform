@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 FIXTURE_DIRS = (
-   '/web-app-platform/Fixtures/',
+   '/code/Fixtures/',
 )
 
 

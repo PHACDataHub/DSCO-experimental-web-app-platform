@@ -3,62 +3,40 @@ version: "3.6"
 
 services:
   db:
-    container_name: wap-backend-pg-database
-    image: 'postgres'
+    image: postgres
     stop_signal: SIGTERM
     stop_grace_period: 20s # https://docs.docker.com/compose/compose-file/compose-file-v2/#stop_grace_period
     ports:
       - '5432'
-    environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_HOST_AUTH_METHOD: trust
-      PGUSER: postgres
+    env_file:
+      - ./database/database.env
 
   pgadmin:
-    container_name: wap-pgadmin
     build:
-      context: .
-      dockerfile: Dockerfile-pgadmin
+      context: ./pgAdmin
       args:
-        DB_NAME: ${DB_NAME}
-        DB_USER: ${DB_USER}
-        DB_PASSWORD: ${DB_PASSWORD}
-        DB_HOST: ${DB_HOST}
-        DB_PORT: ${DB_PORT}
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
-      PGADMIN_LISTEN_PORT: ${PGADMIN_LISTEN_PORT}
-      PGADMIN_CONFIG_SERVER_MODE: ${PGADMIN_CONFIG_SERVER_MODE}
-      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: ${PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED}
-      PGADMIN_CONFIG_UPGRADE_CHECK_ENABLED: ${PGADMIN_CONFIG_UPGRADE_CHECK_ENABLED}
+        DB_NAME: db_name
+        DB_USER: db_user
+        DB_PASSWORD: password
+        DB_HOST: db
+        DB_PORT: 5432
+    env_file: ./pgAdmin/pgAdmin.env
     ports:
       - "5433:5433"
     depends_on:
       - db
 
-  core:
-    container_name: wap-core-django
-    build:
-      context: .
-      dockerfile: Dockerfile-backend
+  core-api:
+    build: ./core-api
     command: python manage.py runserver 0.0.0.0:8000
+    env_file:
+      - ./core-api/core-api.env
     environment:
-      - DB_NAME=${DB_NAME}
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_HOST=${DB_HOST}
-      - DB_PORT=${DB_PORT}
       - DATABASE=postgres
-      - SECRET_KEY=${SECRET_KEY}
-      - DEBUG=${DEBUG}
-      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
     ports:
       - '8000:8000'
     volumes:
-      - .:/code
+      - ./core-api:/code
     depends_on:
       - db
     links:
@@ -66,10 +44,7 @@ services:
 
   frontend:
     stdin_open: true
-    container_name: wap-frontend-react
-    build:
-      context: .
-      dockerfile: Dockerfile-frontend
+    build: ./frontend
     ports:
       - "3000:3000"
     volumes:
