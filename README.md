@@ -11,6 +11,9 @@ There is a lack of 'starting points' for developers to create full-stack interna
 
 We are trying to solve this issue by providing a full-stack application that be be deployed easily and modularity while still having separated components to allow development on smaller portions of the application at a time.
 
+## Looking to contribute?
+Please refer to the [CONTRIBUTING.md](https://github.com/PHACDataHub/web-app-platform/blob/main/CONTRIBUTING.md) to see how we would like the contributions to be structured 😄
+
 # Getting Started ([Local Docker](https://github.com/PHACDataHub/web-app-platform#method-1-setting-up-locally-using-docker) or [GitHub Codespace](https://github.com/PHACDataHub/web-app-platform#method-2-setting-up-using-github-codespaces)
 ## Method 1: Setting up locally using Docker
 > NOTE: Requires local admin privileges to be able to install _docker_ and _docker-compose_
