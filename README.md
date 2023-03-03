@@ -17,7 +17,17 @@ We are trying to solve this issue by providing a full-stack application that be 
 
 ## Method 2: Setting up locally using Docker
 
-### Setting up Python environment
+### Validate, Start, and Deploy Developer environment
+You can run the script below from the root directory to do the following:
+- Validate the Developer environment (checks for required packages and .env files)
+- Creates the necessary default .env files if not already present
+- Docker compose up the containers
+
+```bash
+./get-started.sh
+```
+
+### Setting up Python Virtual environment (optional)
 
 To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with <br />
 
@@ -41,19 +51,6 @@ Then install the project dependencies with
 
 ```
 pip install -r requirements.txt
-```
-
-### Validate environment
-First you can validate that your developer environment satisfies all the requirements for running this project using docker by running the following command in the base directory of this project
-
-```bash
-./check-dev.sh
-```
-
-### Start and deploy containers
-
-```bash
-docker compose up --build -d
 ```
 
 ### Check out containers!
