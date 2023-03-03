@@ -9,9 +9,62 @@ There is a lack of 'starting points' for developers to create full-stack interna
 
 We are trying to solve this issue by providing a full-stack application that be be deployed easily and modularity while still having separated components to allow development on smaller portions of the application at a time.
 
-# Getting Started
+# Getting Started ([Local Docker](https://github.com/PHACDataHub/web-app-platform#method-1-setting-up-locally-using-docker) or [GitHub Codespace](https://github.com/PHACDataHub/web-app-platform#method-2-setting-up-using-github-codespaces)
+## Method 1: Setting up locally using Docker
+> NOTE: Requires local admin privileges to be able to install _docker_ and _docker-compose_
 
-## Method 1: Setting up using GitHub Codespaces
+### Validate, Start, and Deploy Developer environment
+You can run the script below from the root directory to do the following:
+- Validate the Developer environment (checks for required packages and .env files)
+> NOTE: You'll need to install any missing packages locally to continue
+- Creates the necessary default .env files if not already present
+- Docker compose up the containers
+
+```bash
+./get-started.sh
+```
+
+### Check out containers!
+
+Chakra UI React frontend
+> http://localhost:3000/
+
+GraphiQL backend UI
+> http://localhost:8000/graphql/
+
+Django admin page (default superuser login credentials = admin : password)
+> http://localhost:8000/admin/
+
+pgAdmin UI
+> http://localhost:5433/browser/
+
+### OPTIONAL: Setting up Python Virtual environment
+
+To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with <br />
+
+```
+pip install virtualenv
+```
+
+Clone or download this repository and open it in your editor of choice. In a terminal (mac/linux) or windows terminal, run the following command in the base directory of this project
+
+```
+python -m venv venv
+```
+
+That will create a new folder `venv` in your project directory. Next activate it with this command on mac/linux:
+
+```
+source venv/bin/activate
+```
+
+Then install the project dependencies with
+
+```
+pip install -r requirements.txt
+```
+
+## Method 2: Setting up using GitHub Codespaces
 
 ### Get the Codespace up
 Create your very own GitHub Codespace by clicking the following two buttons in order!
@@ -58,55 +111,3 @@ You'll be able to now see all the containers in a list along with their forwarde
 You can click the button below for each port to navigate to the deployed container!
 ![Open port in browser](https://github.com/PHACDataHub/web-app-platform/blob/main/README-imgs/Codespace-4.PNG)
 > NOTE: There is currently a known [issue](https://github.com/community/community/discussions/28563) where you might get navigated to the a _'502 Bad Gateway nginx'_ page. The current fix is to wait about 10 minutes for the containers to be fully configured and deployed. This should generally fix the issue for now until a better solution is presented.
-
-## Method 2: Setting up locally using Docker
-
-### Validate, Start, and Deploy Developer environment
-You can run the script below from the root directory to do the following:
-- Validate the Developer environment (checks for required packages and .env files)
-- Creates the necessary default .env files if not already present
-- Docker compose up the containers
-
-```bash
-./get-started.sh
-```
-
-### Setting up Python Virtual environment (optional)
-
-To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with <br />
-
-```
-pip install virtualenv
-```
-
-Clone or download this repository and open it in your editor of choice. In a terminal (mac/linux) or windows terminal, run the following command in the base directory of this project
-
-```
-python -m venv venv
-```
-
-That will create a new folder `venv` in your project directory. Next activate it with this command on mac/linux:
-
-```
-source venv/bin/activate
-```
-
-Then install the project dependencies with
-
-```
-pip install -r requirements.txt
-```
-
-### Check out containers!
-
-Chakra UI React frontend
-> http://localhost:3000/
-
-GraphiQL backend UI
-> http://localhost:8000/graphql/
-
-Django admin page (default superuser login credentials = admin : password)
-> http://localhost:8000/admin/
-
-pgAdmin UI
-> http://localhost:5433/browser/
