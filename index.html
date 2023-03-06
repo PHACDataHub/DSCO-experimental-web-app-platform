@@ -151,7 +151,16 @@
     scenesContainer.addEventListener('scroll-scene-enter', ({ detail }) => {
       const index = scenes.indexOf(detail.element);
       detail.element.classList.add('active');
-      graphic.textContent = 'Scene Graphic ' + (index + 1);
+
+      // Create a new <img> element
+      const img = document.createElement('img');
+
+      // Set the <img> src attribute to the URL of the desired image
+      img.src = `/images/GitHubPage/Scene-graphic-${index + 1}.jpg`;
+
+      // Replace the text content of the .graphic element with the new <img> element
+      graphic.innerHTML = '';
+      graphic.appendChild(img);
     });
 
     scenesContainer.addEventListener('scroll-scene-exit', ({ detail }) => {
@@ -170,19 +179,11 @@
   <div class="intro-text">
     <p>
       <h1>THIS IS A VERY EXPERIMENTAL GITHUB REPO</h1>
-      <h3>This means that everything in this repo is up in the air and will likely
-        change. This may not meet all Government of Canada web requirements, although
-        the intent is to test out and work on developing some better capabilities for
-        GitHub repos.
-      </h3>
     </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet modi
-      accusamus fuga, itaque assumenda repellat cumque minus sunt voluptatibus
-      officia corrupti voluptatem aut explicabo dignissimos recusandae
-      nesciunt similique? Praesentium tempore maiores officiis assumenda
-      similique ipsam amet, magnam possimus modi. Totam, laborum. Aut harum
-      est, consequatur quas rerum explicabo ad ut.
+    <p>This means that everything in this repo is up in the air and will likely
+      change. This may not meet all Government of Canada web requirements, although
+      the intent is to test out and work on developing some better capabilities for
+      GitHub repos.
     </p>
   </div>
 
@@ -190,12 +191,12 @@
     <div class="scroller-items scroller-container__column">
       <scroll-scene>Scene 1</scroll-scene>
       <scroll-scene>Scene 2</scroll-scene>
-      <scroll-scene>Scene 3</scroll-scene>
+      <!-- <scroll-scene>Scene 3</scroll-scene>
       <scroll-scene>Scene 4</scroll-scene>
       <scroll-scene>Scene 5</scroll-scene>
       <scroll-scene>Scene 6</scroll-scene>
       <scroll-scene>Scene 7</scroll-scene>
-      <scroll-scene>Scene 8</scroll-scene>
+      <scroll-scene>Scene 8</scroll-scene> -->
     </div>
     <div class="scroller-visual scroller-container__column">
       <div class="graphic sticky-top"></div>

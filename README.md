@@ -74,9 +74,9 @@ pip install -r requirements.txt
 ### ⬆️Get the Codespace up
 Create your very own GitHub Codespace by clicking the following two buttons in order!
 
-![Codespace initial button](https://github.com/PHACDataHub/web-app-platform/blob/main/README-imgs/Codespace-1.PNG)
+![Codespace initial button](https://github.com/PHACDataHub/web-app-platform/blob/main/images/README/Codespace-1.PNG)
 
-![Codespace second button](https://github.com/PHACDataHub/web-app-platform/blob/main/README-imgs/Codespace-2.PNG)
+![Codespace second button](https://github.com/PHACDataHub/web-app-platform/blob/main/images/README/Codespace-2.PNG)
 
 ### 📂Provide persmissions for scripts to run
 Wait for the Codespace to fully set up and do it's thing. 
@@ -109,10 +109,10 @@ You should now be able to run the get-started script to bring up and deploy the 
 
 ### 👓Check out the containers
 You can find the containers through the PORTS window/tab (at the bottom)
-![PORTS tab](https://github.com/PHACDataHub/web-app-platform/blob/main/README-imgs/Codespace-3.PNG)
+![PORTS tab](https://github.com/PHACDataHub/web-app-platform/blob/main/images/README/Codespace-3.PNG)
 
 You'll be able to now see all the containers in a list along with their forwarded ports.
 
 You can click the button below for each port to navigate to the deployed container!
-![Open port in browser](https://github.com/PHACDataHub/web-app-platform/blob/main/README-imgs/Codespace-4.PNG)
+![Open port in browser](https://github.com/PHACDataHub/web-app-platform/blob/main/images/README/Codespace-4.PNG)
 > NOTE: There is currently a known [issue](https://github.com/community/community/discussions/28563) where you might get navigated to the a _'502 Bad Gateway nginx'_ page. The current fix is to wait about 10 minutes for the containers to be fully configured and deployed. This should generally fix the issue for now until a better solution is presented.
