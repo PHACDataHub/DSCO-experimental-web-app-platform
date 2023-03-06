@@ -152,15 +152,32 @@
       const index = scenes.indexOf(detail.element);
       detail.element.classList.add('active');
 
-      // Create a new <img> element
+		if (index < 1) {
+		// Create a new <img> element
       const img = document.createElement('img');
 
       // Set the <img> src attribute to the URL of the desired image
-      img.src = `/images/GitHubPage/Scene-graphic-${index + 1}.jpg`;
+      img.src = `https://github.com/PHACDataHub/web-app-platform/blob/main/images/GitHubPage/Scene-graphic-${index + 1}.jpg?raw=true`;
+      img.style=`margin: auto; width: 95%; height: 500px`;
+      img.alt = `Scene Graphic ${index + 1}`;
 
       // Replace the text content of the .graphic element with the new <img> element
       graphic.innerHTML = '';
       graphic.appendChild(img);
+        }
+      else {
+      // Create a new <img> element
+      const iframe = document.createElement('iframe');
+
+      // Set the <img> src attribute to the URL of the desired image
+      iframe.src = `https://hewlettpackard.github.io/yoda/yoda-kanban.html?owner=PHACDataHub&repolist=DSCO-projects&milestonelist=All%20milestones&columns=[Sprint%20Backlog]open:*,[Tentative]open:P%20-%20Tentative,[In%20progress]open:Q%20-%20In%20Progress,[Done]closed:*`;
+      iframe.style=`margin: auto; width: 95%; height: 500px`;
+      iframe.title = `Scene Graphic ${index + 1}`;
+
+      // Replace the text content of the .graphic element with the new <img> element
+      graphic.innerHTML = '';
+      graphic.appendChild(iframe);
+      }
     });
 
     scenesContainer.addEventListener('scroll-scene-exit', ({ detail }) => {
@@ -186,23 +203,22 @@
       the intent is to test out and work on developing some better capabilities for
       GitHub repos.
     </p>
-    <p>This means that everything in this repo is up in the air and will likely
-      change. This may not meet all Government of Canada web requirements, although
-      the intent is to test out and work on developing some better capabilities for
-      GitHub repos.
-    </p>
   </div>
 
   <scroll-scene class="scroller-container">
     <div class="scroller-items scroller-container__column">
-      <scroll-scene>Scene 1</scroll-scene>
-      <scroll-scene>Scene 2</scroll-scene>
-      <!-- <scroll-scene>Scene 3</scroll-scene>
-      <scroll-scene>Scene 4</scroll-scene>
-      <scroll-scene>Scene 5</scroll-scene>
-      <scroll-scene>Scene 6</scroll-scene>
-      <scroll-scene>Scene 7</scroll-scene>
-      <scroll-scene>Scene 8</scroll-scene> -->
+      <scroll-scene>
+      	<div>
+          <h2>Wondering what this repo is about?</h2>
+          <p>This scrollytelling page should help provide some additional information!</p>
+        </div>
+      </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>Curious about what is going on within the repo?</h2>
+        	<p>The HP/Yoda iframe to the right should give you some more information about it.</p>
+        </div>
+	  </scroll-scene>
     </div>
     <div class="scroller-visual scroller-container__column">
       <div class="graphic sticky-top"></div>
