@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This is based off of https://github.com/rdmurphy/scroll-scene-element -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -152,8 +153,8 @@
       const index = scenes.indexOf(detail.element);
       detail.element.classList.add('active');
 
-		if (index < 1) {
-		// Create a new <img> element
+		if (index < 2) {
+		  // Create a new <img> element
       const img = document.createElement('img');
 
       // Set the <img> src attribute to the URL of the desired image
@@ -164,8 +165,7 @@
       // Replace the text content of the .graphic element with the new <img> element
       graphic.innerHTML = '';
       graphic.appendChild(img);
-        }
-      else {
+      } else {
       // Create a new <img> element
       const iframe = document.createElement('iframe');
 
@@ -210,13 +210,19 @@
       <scroll-scene>
       	<div>
           <h2>Wondering what this repo is about?</h2>
-          <p>This scrollytelling page should help provide some additional information!</p>
+          <p>This scrolly-telling page should help provide some additional information!</p>
         </div>
       </scroll-scene>
       <scroll-scene>
       	<div>
+      		<h2>Using the YODA iframe!</h2>
+        	<p>Maybe using an iframe of the HP/Yoda GitHub repo can work here to show the user some more information! Scroll down to take a look.</p>
+        </div>
+	  </scroll-scene>
+      <scroll-scene>
+      	<div>
       		<h2>Curious about what is going on within the repo?</h2>
-        	<p>The HP/Yoda iframe to the right should give you some more information about it.</p>
+        	<p>The iframe to the right should give you some more information about it.</p>
         </div>
 	  </scroll-scene>
     </div>
