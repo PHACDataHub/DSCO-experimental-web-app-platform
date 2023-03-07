@@ -1,4 +1,4 @@
-remote_theme: wet-boew/gcweb-jekyll
+remote_theme: wet-boew/gcweb-jekyll # https://github.com/wet-boew/gcweb-jekyll
 global:
   lang: en
 defaults:
