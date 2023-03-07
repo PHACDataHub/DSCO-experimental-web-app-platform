@@ -32,20 +32,20 @@ You can run the script below from the root directory to do the following:
 ### 🥳Check out containers!
 
 Chakra UI React frontend
-> http://localhost:3000/
+> [http://localhost:3000/](http://localhost:3000/)
 
 GraphiQL backend UI
-> http://localhost:8000/graphql/
+> [http://localhost:8000/graphql/](http://localhost:8000/graphql/)
 
 Django admin page (default superuser login credentials = admin : password)
-> http://localhost:8000/admin/
+> [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
 pgAdmin UI
-> http://localhost:5433/browser/
+> [http://localhost:5433/browser/](http://localhost:5433/browser/)
 
 ### 🤷OPTIONAL: Setting up Python Virtual environment
 
-To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with <br />
+To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with
 
 ```
 pip install virtualenv
@@ -91,11 +91,11 @@ chmod +x ./core-api/docker-entrypoint.sh
 
 ### 🚫NOT WORKING *** Resolve Codespace Docker container bug
 There is currently a bug associated with running Docker containers on GitHub Codespaces with regards to the port forwarding
-> ISSUE: https://github.com/community/community/discussions/28563
+> [KNOWN ISSUE](https://github.com/community/community/discussions/28563)
 
 There is a proposed fix which is as easy are running the command below
 
-> SOLUTION: https://github.com/community/community/discussions/28563
+> [PROPOSED SOLUTION](https://github.com/community/community/discussions/28563#discussioncomment-4880737)
 
 ```bash
 npm run start -- --host 0.0.0.0
