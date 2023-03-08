@@ -37,8 +37,6 @@ ______________________
 <!-- markdownlint-disable MD024 MD025 -->
 # DSCO Plate-forme d'application Web expérimentale
 
-([English](#dsco-experimental-web-app-platform))
-
-# ⚠️CLAUSE DE NON-RESPONSABILITÉ
+## ⚠️CLAUSE DE NON-RESPONSABILITÉ
 
 Ce projet est en plein développement et n'est en aucun cas terminé. En raison de la nature du processus de développement, le langage est actuellement géré automatiquement et peut donc ne pas être précis. De nombreux aspects du projet peuvent ne pas fonctionner actuellement et/ou ne reflètent pas directement les technologies que le gouvernement utilise actuellement ou utilisera.
