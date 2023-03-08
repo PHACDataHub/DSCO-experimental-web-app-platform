@@ -1,7 +1,8 @@
-([Français](#⚠️clause-de-non-responsabilité))
+# DSCO Experimental Web App Platform
 
-# ⚠️DISCLAIMER
+([Français](#dsco-plate-forme-d'application-web-expérimentale))
 
+## ⚠️DISCLAIMER
 This project is under heavy development and is not by any means, complete. Due to the nature of the development process, the language is currently being handled automatically and therefore may not be accurate. There are many aspects of the project that may not currently work and/or does not directly reflect the technologies that the government has, currently, or will use.
 
 ## 📈Project Management and Tracker
@@ -23,7 +24,7 @@ Looking to get started using the repo? Take a look at one of the two deployment 
 ## 🤓Want to contribute?
 Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) to see how we would like the contributions to be structured 😄
 
-### License
+### 📄License
 
 Unless otherwise noted, the source code of this project is covered under Crown Copyright, Government of Canada, and is distributed under the [MIT License](LICENSE).
 
@@ -34,6 +35,9 @@ ______________________
 ______________________
 
 <!-- markdownlint-disable MD024 MD025 -->
+# DSCO Plate-forme d'application Web expérimentale
+
+([English](#dsco-experimental-web-app-platform))
 
 # ⚠️CLAUSE DE NON-RESPONSABILITÉ
 

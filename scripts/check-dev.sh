@@ -23,4 +23,6 @@ function validateDeveloperEnvironment () {
   # fileExists ./env/backend.env
   # ...
 
+  # check that the initial_data.json is present and formatted properly
+  initialDataExists ./core-api/Fixtures/initial_data.json
 }

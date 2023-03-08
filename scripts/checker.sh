@@ -53,6 +53,21 @@ function commandRequired () {
 
 }
 
+function getStartingData() {
+  # fetches the initial_data.json file from the example repo
+  data_url="https://raw.githubusercontent.com/codeanddraw/react-django-graphQL-postgres/Develop/Fixtures/initial_data.json"
+  output_file="./core-api/Fixtures/initial_data.json"
+
+  curl "${data_url}" | python -mjson.tool > "${output_file}"
+
+  # change all instances of 'worldapi' to 'backend' to reflect our model
+  old_word="worldapi"
+  new_word="backend"
+  file_path="./core-api/Fixtures/initial_data.json"
+
+  sed -i "s/${old_word}/${new_word}/g" ${file_path}
+}
+
 function fileExists() {
     if [[ -z "$1" ]]; then
         echo fileExists: needs a file name as a parameter
@@ -73,4 +88,15 @@ function fileExists() {
           echo "$PGENV" > $reqFile
         fi
     fi
+}
+
+function initialDataExists() {
+  if [ -s "$1" ]; then
+    echo "✓ - ${1} exists and is populated!"
+  else
+    echo "$1 is empty and will need populating ... doing that now."
+    echo ""
+    getStartingData
+    echo ""
+  fi
 }
