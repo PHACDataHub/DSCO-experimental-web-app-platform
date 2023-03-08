@@ -4,15 +4,12 @@
 
 ### ✔️Validate, Start, and Deploy Developer environment
 
-You can run the script below from the root directory to do the following:
-- Validate the Developer environment (checks for required packages and .env files)
-> NOTE: You'll need to install any missing packages locally to continue
-- Creates the necessary default .env files if not already present
-- Docker compose up the containers
+Run the script below from the root directory:
 
 ```bash
 ./get-started.sh
 ```
+> If you're curious about the script, see what it's doing [here](#what-is-the-get-started-script-doing).
 
 ### 🥳Check out containers!
 
@@ -28,7 +25,11 @@ Django admin page (default superuser login credentials = admin : password)
 pgAdmin UI
 > [http://localhost:5433/browser/](http://localhost:5433/browser/)
 
-### 🤷OPTIONAL: Setting up Python Virtual environment
+## 🤷Optional Information 
+
+The sections below are optional and will provide you with some more information and/or more beneficial configurations.
+
+### Setting up Python Virtual environment
 
 To get this project up and running you should start by having Python installed on your computer. It's advised you create a virtual environment to store your projects dependencies separately. You can install virtualenv with
 
@@ -53,3 +54,12 @@ Then install the project dependencies with
 ```
 pip install -r requirements.txt
 ```
+
+### What is the get-started script doing?
+
+The script is doing the following:
+- Validate the Developer environment (checks for required packages and .env files)
+> NOTE: You'll need to install any missing packages locally to continue
+- Creates the necessary default .env files if not already present
+- Checks and populates (if necessary) the /core-api/Fixtures/initial_data.json file
+- Docker compose up the containers
