@@ -8,7 +8,7 @@ This project is under heavy development and is not by any means, complete. Due t
 
 ## 📈Project Management and Tracker
 
-This [GitHub Project](https://github.com/orgs/PHACDataHub/projects/10/views/2) is current for DSCO in general although this will encompass the web-app-platform
+This [GitHub Project](https://github.com/orgs/PHACDataHub/projects/10/views/2) is current for DSCO in general although this will encompass the DSCO-experimental-web-app-platform
 
 ## 🤔Problem statement that we are trying to solve
 
