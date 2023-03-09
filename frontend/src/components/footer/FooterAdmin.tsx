@@ -40,7 +40,7 @@ export default function Footer() {
 						base: '20px',
 						md: '44px'
 					}}>
-					<Link fontWeight='500' color={textColor} href='https://github.com/PHACDataHub/web-app-platform/discussions/categories/q-a'>
+					<Link fontWeight='500' color={textColor} href='https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/discussions/categories/q-a'>
 						GitHub Q&A
 					</Link>
 				</ListItem>
@@ -49,12 +49,12 @@ export default function Footer() {
 						base: '20px',
 						md: '44px'
 					}}>
-					<Link fontWeight='500' color={textColor} href='https://github.com/PHACDataHub/web-app-platform'>
+					<Link fontWeight='500' color={textColor} href='https://github.com/PHACDataHub/DSCO-experimental-web-app-platform'>
 						GitHub Repo
 					</Link>
 				</ListItem>
 				<ListItem>
-          <Link fontWeight='500' color={textColor} href='https://github.com/PHACDataHub/web-app-platform/wiki'>
+          <Link fontWeight='500' color={textColor} href='https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/wiki'>
 						GitHub Wiki
 					</Link>
 				</ListItem>
