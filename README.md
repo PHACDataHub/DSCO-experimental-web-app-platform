@@ -18,7 +18,7 @@ We are trying to solve this issue by providing a full-stack application that be 
 
 ## 👨‍💻Getting Started
 
-### [Local Docker](/README-docs/EN/local-docker-deployment.md) or [GitHub Codespace](/README-docs/EN/github-codespace-deployment.md)
+### [GitHub Codespace](/README-docs/EN/github-codespace-deployment.md) or [Local Docker](/README-docs/EN/local-docker-deployment.md)
 
 Looking to get started using the repo? Take a look at one of the two deployment methods above! 🚀
 
