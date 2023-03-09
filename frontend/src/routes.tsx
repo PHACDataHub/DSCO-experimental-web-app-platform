@@ -5,6 +5,7 @@ import {
   MdHome,
   MdLock,
   MdOutlineShoppingCart,
+  MdApi,
 } from "react-icons/md";
 
 // Admin Imports
@@ -81,7 +82,7 @@ const routes = [
     name: "Database GQL Fetch",
     layout: "/admin",
     path: "/apicall",
-    icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
+    icon: <Icon as={MdApi} width="20px" height="20px" color="inherit" />,
     component: GQLQueryFetch,
   },
 ];
