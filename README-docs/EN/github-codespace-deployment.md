@@ -14,7 +14,7 @@ Click the `Codespace` tab
 
 Click on `Create codespace on main`
 
-![Codespace third click](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/blob/main/static/imgs/README/Codespace-2.PNG?raw=true)
+![Codespace third click](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/blob/main/static/imgs/README/Codespace-3.PNG?raw=true)
 
 ### 🏃Run the containers
 
