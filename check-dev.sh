@@ -7,7 +7,7 @@ echo "-=-= Validating developer environment"
 
 function validateDeveloperEnvironment () {
   # include the commandRequired function
-  source "$(dirname "${BASH_SOURCE[0]}")/checker.sh"
+  source "$(dirname "${BASH_SOURCE[0]}")/scripts/checker.sh"
 
   commandRequired docker
   commandRequired docker-compose
@@ -26,3 +26,5 @@ function validateDeveloperEnvironment () {
   # check that the initial_data.json is present and formatted properly
   initialDataExists ./core-api/Fixtures/initial_data.json
 }
+
+validateDeveloperEnvironment

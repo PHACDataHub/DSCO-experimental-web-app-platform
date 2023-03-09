@@ -22,6 +22,7 @@ while ! python manage.py loaddata /code/Fixtures/initial_data.json  2>&1; do
 done
 
 # Create the Django super user
+# TODO: Move this elsewhere and hide credentials
 echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'admin@example.com', 'password')" | python manage.py shell
 
 echo "Django docker is fully configured successfully."

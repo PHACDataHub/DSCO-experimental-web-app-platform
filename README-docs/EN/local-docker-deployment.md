@@ -4,12 +4,17 @@
 
 ### ✔️Validate, Start, and Deploy Developer environment
 
-Run the script below from the root directory:
+Run the script below from the root directory to ensure that your developer environment is set up properly:
 
 ```bash
-./get-started.sh
+./check-dev.sh
 ```
-> If you're curious about the script, see what it's doing [here](#what-is-the-get-started-script-doing).
+
+Build and deploy the containers!
+```bash
+docker compose up --build -d
+```
+> If you're curious about the script, see what it's doing [here](./what-is-check-dev-doing.md).
 
 ### 🥳Check out containers!
 
@@ -54,12 +59,3 @@ Then install the project dependencies with
 ```
 pip install -r /core-api/requirements.txt
 ```
-
-### What is the get-started script doing?
-
-The script is doing the following:
-- Validate the Developer environment (checks for required packages and .env files)
-> NOTE: You'll need to install any missing packages locally to continue
-- Creates the necessary default .env files if not already present
-- Checks and populates (if necessary) the /core-api/Fixtures/initial_data.json file
-- Docker compose up the containers
