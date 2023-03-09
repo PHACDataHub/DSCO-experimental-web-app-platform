@@ -1,4 +1,4 @@
-# 🤔What is the get-started script doing?
+# 🤔What is the check-dev script doing?
 
 The script is doing the following:
 - Checks for required packages (_docker_ and _docker-compose_)
