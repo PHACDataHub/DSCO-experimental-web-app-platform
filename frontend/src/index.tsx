@@ -7,9 +7,17 @@ import AdminLayout from './layouts/admin';
 import RTLLayout from './layouts/rtl';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from './theme/theme';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+
+
+const client = new ApolloClient({
+	cache: new InMemoryCache(),
+	uri: "http://localhost:8000/graphql/"
+  });
 
 ReactDOM.render(
 	<ChakraProvider theme={theme}>
+		<ApolloProvider client={client}>
 		<React.StrictMode>
 			<HashRouter>
 				<Switch>
@@ -20,6 +28,7 @@ ReactDOM.render(
 				</Switch>
 			</HashRouter>
 		</React.StrictMode>
+		</ApolloProvider>
 	</ChakraProvider>,
 	document.getElementById('root')
 );

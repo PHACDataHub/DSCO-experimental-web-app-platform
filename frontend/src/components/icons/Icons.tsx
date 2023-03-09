@@ -453,10 +453,10 @@ export const HorizonLogo = createIcon({
 	viewBox: '0 0 179 20',
 	path: (
 		<g width='179' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'>
-			<text x="0" y="20" font-weight="bold" font-size="2em" fill='currentColor'>
+			<text x="0" y="20" fontWeight="bold" fontSize="2em" fill='currentColor'>
         DSCO
       </text>
-      <text x="88" y="15" font-weight="normal" font-size="1.3em" fill='currentColor'>
+      <text x="88" y="15" fontWeight="normal" fontSize="1.3em" fill='currentColor'>
         -webapp
       </text>
 		</g>
