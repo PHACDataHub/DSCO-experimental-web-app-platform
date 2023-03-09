@@ -5,6 +5,7 @@ import {
 
 import { useEffect, useState } from "react";
 import { gql, useQuery } from "@apollo/client";
+import GQLFormater from "./gqlFormater";
 
 
 const Get_Query = gql`
@@ -27,9 +28,10 @@ function GQLFetchApp() {
 
 
   return (<>
-  {item.map( (val) =>{
-    return(
-    <div><h1>{val.countryCode} : {val.countryName}</h1> </div>) 
+  {item.map( (value) =>{
+    return(    
+    <GQLFormater {...value} />
+    ) 
   } )}
   </>)
 }
