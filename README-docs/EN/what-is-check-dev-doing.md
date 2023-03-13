@@ -6,4 +6,4 @@ The script is doing the following:
 - Checks for required packages and .env files and creates the necessary default .env files if not already present
 - Checks and populates (if necessary) the /core-api/Fixtures/initial_data.json file
 
-⬅️ [Back to README](/README.md)
+⬅️ [Back to README](../../README.md)

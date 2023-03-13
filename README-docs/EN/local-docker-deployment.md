@@ -60,4 +60,4 @@ Then install the project dependencies with
 pip install -r /core-api/requirements.txt
 ```
 
-⬅️ [Back to README](/README.md)
+⬅️ [Back to README](../../README.md)
