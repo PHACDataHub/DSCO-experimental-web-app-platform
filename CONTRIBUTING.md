@@ -47,3 +47,5 @@ Breaking changes
 Breaking changes are indicated by putting `BREAKING CHANGE`: at the start of the message body, for any commit type. Optionally they may be emphasized by appending a `!` after the type and scope. The message body should provide appropriate guidance for developers affected by the breaking change.
 
 # Thanks for your Contribution! 😄
+
+⬅️ [Back to README](/README)

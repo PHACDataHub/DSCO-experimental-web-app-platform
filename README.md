@@ -23,9 +23,9 @@ We are trying to solve this issue by providing a full-stack application that be 
 Looking to get started using the repo? Take a look at one of the two deployment methods above! 🚀
 
 ## 🤓Want to contribute?
-Please refer to the [CONTRIBUTING.md](/CONTRIBUTING.md) to see how we would like the contributions to be structured 😄
+Please refer to the [CONTRIBUTING.md](/CONTRIBUTING) to see how we would like the contributions to be structured 😄
 
-To configure your IDE, you might want to start with creating a [Python virtual environment](/README-docs/EN/local-docker-deployment.md#setting-up-python-virtual-environment) and installing the packages from [requirements.txt](/core-api/requirements.txt)
+To configure your IDE, you might want to start with creating a [Python virtual environment](/README-docs/EN/local-docker-deployment.md#setting-up-python-virtual-environment) and installing the packages from [requirements.txt](/core-api/requirements)
 
 ### 📄License
 

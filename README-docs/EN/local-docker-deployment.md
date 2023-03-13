@@ -1,5 +1,3 @@
-⬅️ [Back to README](/README.md)
-
 ## 🏡Setting up locally using Docker
 
 > NOTE: Requires local admin privileges to be able to install _docker_ and _docker-compose_
@@ -16,7 +14,7 @@ Build and deploy the containers!
 ```bash
 docker compose up --build -d
 ```
-> If you're curious about the script, see what it's doing [here](./what-is-check-dev-doing.md).
+> If you're curious about the script, see what it's doing [here](./what-is-check-dev-doing).
 
 ### 🥳Check out containers!
 
@@ -61,3 +59,5 @@ Then install the project dependencies with
 ```
 pip install -r /core-api/requirements.txt
 ```
+
+⬅️ [Back to README](/README)
