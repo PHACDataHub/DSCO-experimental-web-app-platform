@@ -1,3 +1,5 @@
+⬅️ [Back to README](/README.md)
+
 ## 🏡Setting up locally using Docker
 
 > NOTE: Requires local admin privileges to be able to install _docker_ and _docker-compose_
