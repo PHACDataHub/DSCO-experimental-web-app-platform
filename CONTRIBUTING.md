@@ -48,4 +48,4 @@ Breaking changes are indicated by putting `BREAKING CHANGE`: at the start of the
 
 # Thanks for your Contribution! 😄
 
-⬅️ [Back to README](../../README)
+⬅️ [Back to README](./README.md)
