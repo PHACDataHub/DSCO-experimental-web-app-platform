@@ -14,7 +14,7 @@ Build and deploy the containers!
 ```bash
 docker compose up --build -d
 ```
-> If you're curious about the script, see what it's doing [here](./what-is-check-dev-doing).
+> If you're curious about the script, see what it's doing [here](./what-is-check-dev-doing.md).
 
 ### 🥳Check out containers!
 
@@ -60,4 +60,4 @@ Then install the project dependencies with
 pip install -r /core-api/requirements.txt
 ```
 
-⬅️ [Back to README](/README)
+⬅️ [Back to README](/README.md)
