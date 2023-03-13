@@ -1,10 +1,10 @@
 /*!
-  _   _  ___  ____  ___ ________  _   _   _   _ ___   
- | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
- | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
+  _   _  ___  ____  ___ ________  _   _   _   _ ___
+ | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _|
+ | |_| | | | | |_) || |  / / | | |  \| | | | | || |
  |  _  | |_| |  _ < | | / /| |_| | |\  | | |_| || |
  |_| |_|\___/|_| \_\___/____\___/|_| \_|  \___/|___|
-                                                                                                                                                                                                                                                                                                                                       
+
 =========================================================
 * Horizon UI - v1.1.0
 =========================================================
@@ -23,7 +23,7 @@
 // Chakra imports
 import { Avatar, Box, Flex, FormLabel, Icon, Select, SimpleGrid, useColorModeValue } from '@chakra-ui/react';
 // Assets
-import Usa from 'assets/img/dashboards/usa.png';
+import Can from 'assets/img/dashboards/can.png';
 // Custom components
 import MiniCalendar from 'components/calendar/MiniCalendar';
 import MiniStatistics from 'components/card/MiniStatistics';
@@ -76,7 +76,7 @@ export default function UserReports() {
 					endContent={
 						<Flex me='-16px' mt='10px'>
 							<FormLabel htmlFor='balance'>
-								<Avatar src={Usa} />
+								<Avatar src={Can} />
 							</FormLabel>
 							<Select id='balance' variant='mini' mt='5px' me='0px' defaultValue='usd'>
 								<option value='usd'>USD</option>
