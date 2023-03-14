@@ -81,7 +81,7 @@ export function SidebarResponsive(props: { routes: RoutesType[] }) {
 			<Drawer
 				isOpen={isOpen}
 				onClose={onClose}
-				placement={document.documentElement.dir === 'rtl' ? 'right' : 'left'}
+				placement={'left'}
 				finalFocusRef={btnRef}>
 				<DrawerOverlay />
 				<DrawerContent w='285px' maxW='285px' bg={sidebarBackgroundColor}>

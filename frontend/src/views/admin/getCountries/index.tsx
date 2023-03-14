@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import CountryCard from "./components/CountryCard";
 
-const Get_Query = gql`
+const GET_ALL_COUNTRIES_QUERY = gql`
   {getAllRegions(countryContinent: "North America"){
     countryCode
     countryName}
@@ -17,7 +17,7 @@ const Get_Query = gql`
 
 function GetAllCountryCards() {
   const [item, setItem] = useState([]);
-  const { loading, error , data } = useQuery(Get_Query);
+  const { loading, error , data } = useQuery(GET_ALL_COUNTRIES_QUERY);
 
   useEffect(() => {
     if (data) {
