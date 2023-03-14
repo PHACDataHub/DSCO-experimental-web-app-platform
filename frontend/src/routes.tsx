@@ -14,7 +14,7 @@ import NFTMarketplace from "views/admin/marketplace";
 import Profile from "views/admin/profile";
 import DataTables from "views/admin/dataTables";
 import RTL from "views/admin/rtl";
-import GQLQueryFetch from "views/admin/gqlQueries/gqlFetch";
+import GetCountries from "views/admin/getCountries";
 
 // Auth Imports
 import SignInCentered from "views/auth/signIn";
@@ -79,11 +79,11 @@ const routes = [
     component: RTL,
   },
   {
-    name: "Database GQL Fetch",
+    name: "GET Countries",
     layout: "/admin",
-    path: "/apicall",
+    path: "/get-countries",
     icon: <Icon as={MdApi} width="20px" height="20px" color="inherit" />,
-    component: GQLQueryFetch,
+    component: GetCountries,
   },
 ];
 
