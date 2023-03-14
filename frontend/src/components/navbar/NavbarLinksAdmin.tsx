@@ -107,10 +107,10 @@ export default function HeaderLinks(props: { secondary: boolean }) {
 					</Flex>
 					<Flex flexDirection='column'>
 						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} px='0' borderRadius='8px' mb='10px'>
-							<ItemContent info='Horizon UI Dashboard PRO' />
+							<ItemContent info='GraphQL is pinged from front-end' />
 						</MenuItem>
 						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} px='0' borderRadius='8px' mb='10px'>
-							<ItemContent info='Horizon Design System Free' />
+							<ItemContent info='DSCO web app is containerized' />
 						</MenuItem>
 					</Flex>
 				</MenuList>
@@ -132,12 +132,12 @@ export default function HeaderLinks(props: { secondary: boolean }) {
 					maxW={{ base: '360px', md: 'unset' }}>
 					<Image src={navImage} borderRadius='16px' mb='28px' />
 					<Flex flexDirection='column'>
-						<Link w='100%' href='https://horizon-ui.com/pro'>
+						<Link w='100%' href='https://github.com/PHACDataHub/DSCO-experimental-web-app-platform'>
 							<Button w='100%' h='44px' mb='10px' variant='brand'>
-								Buy Horizon UI PRO
+								See GitHub Repo
 							</Button>
 						</Link>
-						<Link w='100%' href='https://horizon-ui.com/documentation/docs/introduction'>
+						<Link w='100%' href='https://phacdatahub.github.io/DSCO-experimental-web-app-platform/'>
 							<Button
 								w='100%'
 								h='44px'
@@ -150,7 +150,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
 						</Link>
 						<Link w='100%' href='https://github.com/horizon-ui/horizon-ui-chakra-ts'>
 							<Button w='100%' h='44px' variant='no-hover' color={textColor} bg='transparent'>
-								Try Horizon Free
+								Check out Horizon UI
 							</Button>
 						</Link>
 					</Flex>
@@ -179,7 +179,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
 					<Avatar
 						_hover={{ cursor: 'pointer' }}
 						color='white'
-						name='Adela Parkson'
+						name='FirstName LastName'
 						bg='#11047A'
 						size='sm'
 						w='40px'
@@ -198,7 +198,7 @@ export default function HeaderLinks(props: { secondary: boolean }) {
 							fontSize='sm'
 							fontWeight='700'
 							color={textColor}>
-							👋&nbsp; Hey, Adela
+							👋&nbsp; Hey, FirstName
 						</Text>
 					</Flex>
 					<Flex flexDirection='column' p='10px'>

@@ -82,7 +82,7 @@ export default function Dashboard(props: { [x: string]: any }) {
 						<Box>
 							<Navbar
 								onOpen={onOpen}
-								logoText={'Horizon UI Dashboard PRO'}
+								logoText={'DSCO Web App Platform'}
 								brandText={getActiveRoute(routes)}
 								secondary={getActiveNavbar(routes)}
 								message={getActiveNavbarText(routes)}
