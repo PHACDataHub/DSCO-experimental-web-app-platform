@@ -42,6 +42,26 @@ services:
     links:
       - db:db
 
+  graphql-postgraphile:
+    build:
+      context: ./graphql-postgraphile
+    env_file:
+      - ./graphql-postgraphile/graphql-postgraphile.env
+    ports:
+      - 8081:8081
+    depends_on:
+      - db
+    command: ["--connection", "${DATABASE_URL}", "--port", "8081", "--schema", "public", "--append-plugins", "postgraphile-plugin-connection-filter", "--enhance-graphiql"]
+
+  graphql-hasura:
+    image: hasura/graphql-engine:v2.20.0
+    ports:
+    - "8080:8080"
+    env_file:
+      ./graphql-hasura/graphql-hasura.env
+    depends_on:
+    - db
+
   frontend:
     stdin_open: true
     build: ./frontend

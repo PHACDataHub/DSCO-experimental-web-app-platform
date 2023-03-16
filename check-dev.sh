@@ -16,6 +16,8 @@ function validateDeveloperEnvironment () {
   fileExists ./core-api/core-api.env
   fileExists ./database/database.env
   fileExists ./pgAdmin/pgAdmin.env
+  fileExists ./graphql-hasura/graphql-hasura.env
+  fileExists ./graphql-postgraphile/graphql-postgraphile.env
   # when we refactor the local env files...
   # and either generate them of validate them,...
   # fileExists ./env/local/pgadmin.env
