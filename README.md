@@ -22,7 +22,7 @@ We are trying to solve this issue by providing a full-stack application that be 
 
 Looking to get started using the repo? Take a look at one of the two deployment methods above! 🚀
 
-### 👀Checking out all the APIs
+## 👀Checking out all the APIs
 
 This repo comes with 3 APIs out of the box for you to experiment with and test out for your use cases!
 
