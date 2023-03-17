@@ -36,7 +36,7 @@ How to get it working:
 
 ### Postgraphile GraphQL API
 
-Access URL: [http://localhost:8081/graphiql/](http://localhost:8081/graphiql/)
+Access URL: [http://localhost:8081/graphiql](http://localhost:8081/graphiql)
 
 How to get it working:
 1. Start the containers
