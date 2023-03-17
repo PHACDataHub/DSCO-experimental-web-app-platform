@@ -18,8 +18,7 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: helvetica, sans-serif;
       margin: 0 0 75vh;
     }
 
@@ -62,7 +61,7 @@
 
     .scroller-items > scroll-scene {
       align-items: center;
-      font-family: monospace;
+      font-family: helvetica, sans-serif;
       background-color: lightyellow;
       color: grey;
       display: flex;
@@ -158,9 +157,9 @@
       const img = document.createElement('img');
 
       // Set the <img> src attribute to the URL of the desired image
-      img.src = `https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/blob/main/static/imgs/ghpages-scrolly-telling/Scene-graphic-${index + 1}.jpg?raw=true`;
-      img.style=`margin: auto; width: auto; height: 500px`;
-      img.alt = `Scene Graphic ${index + 1}`;
+      img.src = `https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/blob/main/static/imgs/ghpages-scrolly-telling/st-${index + 1}.jpg?raw=true`;
+      img.style=`margin: auto; width: auto; height: 80%`;
+      img.alt = `ScrollyTelling Photo ${index + 1}`;
 
       // Replace the text content of the .graphic element with the new <img> element
       graphic.innerHTML = '';
@@ -209,22 +208,121 @@
     <div class="scroller-items scroller-container__column">
       <scroll-scene>
       	<div>
-          <h2>Wondering what this repo is about?</h2>
-          <p>This scrolly-telling page should help provide some additional information!</p>
+          <h2>1</h2>
+          <p>Do you need a database? An API? A React(ive) frontend? User groups and authentication?</p>
         </div>
       </scroll-scene>
       <scroll-scene>
       	<div>
-      		<h2>Using the YODA iframe!</h2>
-        	<p>Maybe using an iframe of the HP/Yoda GitHub repo can work here to show the user some more information! Scroll down to take a look.</p>
+      		<h2>2</h2>
+        	<p>With this experimental containerized web-app you can pick and choose what capabilities you want, or have all of them!</p>
         </div>
-	  </scroll-scene>
+	    </scroll-scene>
       <scroll-scene>
       	<div>
-      		<h2>Curious about what is going on within the repo?</h2>
+      		<h2>3</h2>
+        	<p>This experimental web-app platform is being developed to accelerate the delivery time for internal facing applications that need various functions including...</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>4</h2>
+        	<p>1. A PostGreSQL database with an easy GraphQL API endpoint to query the database</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>5</h2>
+        	<p>2. Dashboarding capabilities to display analytics about the data</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>6</h2>
+        	<p>3. A modern, React(ive) front end for a clean and beautiful user experience</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>7</h2>
+        	<p>
+            What are the tools being used?
+            We are using a variety of tools which primarily include: Django, React, PostgreSQL, GraphQL, Docker, along with various database interacting tools such as pgAdmin, Hasura, and Postgraphile
+          </p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>8</h2>
+        	<p>With this microservice/containerized architecture, it is easy to take out (and maybe replace) specific sections and still have it still work seamlessly.</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>9</h2>
+        	<p>There are also many additional benefits to using this repo which include but are not limited to:</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>10</h2>
+        	<p>1. Easy to deploy Government of Canada looking, feeling, and functioning webpage through GitHub Pages and the gsweb-jekyll theme</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>11</h2>
+        	<p>2. Easy to deploy scrolly-telling GitHub page to tell the story of your project</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>12</h2>
+        	<p>3. Built in GitHub Actions to control automatic versioning and CHANGELOG alterations along with a PR Linter</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>13</h2>
+        	<p>4. Standardized way of structure the README.md with suggested folder structure for docs</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>14</h2>
+        	<p>Curious about how the project is going and what is currently being developed?</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>15</h2>
         	<p>The iframe to the right should give you some more information about it.</p>
         </div>
-	  </scroll-scene>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>16</h2>
+        	<p>Check out the following interactive statistics: (using HPE Yoda)</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>17</h2>
+        	<p>Burndown chart</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>18</h2>
+        	<p>Issues</p>
+        </div>
+	    </scroll-scene>
+      <scroll-scene>
+      	<div>
+      		<h2>19</h2>
+        	<p>etc.</p>
+        </div>
+	    </scroll-scene>
     </div>
     <div class="scroller-visual scroller-container__column">
       <div class="graphic sticky-top"></div>
