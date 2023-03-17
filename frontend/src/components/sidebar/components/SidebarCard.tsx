@@ -14,7 +14,7 @@ export default function SidebarDocs() {
 			borderRadius='30px'
 			me={{ base: '20px' }}
 			position='relative'>
-			<Flex direction='column' mb='12px' align='center' justify='center' px='15px' pt='40px'>
+			<Flex direction='column' mb='0px' align='center' justify='center' px='15px' pt='40px'>
 				<Text
 					fontSize={{ base: 'lg', xl: '18px' }}
 					color='white'
@@ -30,7 +30,7 @@ export default function SidebarDocs() {
 					Check out the following links to see all the things that this webapp can offer you!
 				</Text>
 			</Flex>
-      <VStack spacing={-3}>
+      <VStack spacing={-4}>
         <Link href='http://localhost:8000/admin'>
           <Button
             bg='whiteAlpha.300'
@@ -56,7 +56,35 @@ export default function SidebarDocs() {
             fontSize='sm'
             minW='185px'
             mx='auto'>
-            GraphQL API End-point
+            Django Graphene API
+          </Button>
+        </Link>
+        <Link href='http://localhost:8080/console'>
+          <Button
+            bg='whiteAlpha.300'
+            _hover={{ bg: 'whiteAlpha.200' }}
+            _active={{ bg: 'whiteAlpha.100' }}
+            mb={{ sm: '16px', xl: '24px' }}
+            color={'white'}
+            fontWeight='regular'
+            fontSize='sm'
+            minW='185px'
+            mx='auto'>
+            Hasura GraphQL API
+          </Button>
+        </Link>
+        <Link href='http://localhost:8081/graphiql'>
+          <Button
+            bg='whiteAlpha.300'
+            _hover={{ bg: 'whiteAlpha.200' }}
+            _active={{ bg: 'whiteAlpha.100' }}
+            mb={{ sm: '16px', xl: '24px' }}
+            color={'white'}
+            fontWeight='regular'
+            fontSize='sm'
+            minW='185px'
+            mx='auto'>
+            Postgraphqile API
           </Button>
         </Link>
         <Link href='http://localhost:5433/browser'>
@@ -70,7 +98,7 @@ export default function SidebarDocs() {
             fontSize='sm'
             minW='185px'
             mx='auto'>
-            PgAdmin / PostgreSQL
+            PgAdmin
           </Button>
         </Link>
       </VStack>

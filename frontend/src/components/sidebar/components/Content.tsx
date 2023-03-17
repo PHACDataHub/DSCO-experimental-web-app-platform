@@ -19,7 +19,7 @@ function SidebarContent(props: { routes: RoutesType[] }) {
 				</Box>
 			</Stack>
 
-			<Box ps='20px' pe={{ lg: '16px', '2xl': '20px' }} mt='60px' mb='40px' borderRadius='30px'>
+			<Box ps='20px' pe={{ lg: '16px', '2xl': '20px' }} mt='20px' mb='40px' borderRadius='30px'>
 				<SidebarCard />
 			</Box>
 		</Flex>
