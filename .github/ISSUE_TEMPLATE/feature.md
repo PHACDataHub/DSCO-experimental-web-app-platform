@@ -13,3 +13,15 @@ assignees: ''
 
 ### ✔️ User Stories
 - [ ] [US] -
+
+### ⛔ Dependencies
+
+_No response_
+
+<details><summary>Acronyms</summary>
+<p>
+
+
+
+</p>
+</details> 

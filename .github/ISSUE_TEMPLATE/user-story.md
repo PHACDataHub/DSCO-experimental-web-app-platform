@@ -13,3 +13,15 @@ As a USER, I want SOMETHING, so that I can RESULT
 
 ### ✔️ Tasks
 - [ ] [TSK] -
+
+### ⛔ Dependencies
+
+_No response_
+
+<details><summary>Acronyms</summary>
+<p>
+
+
+
+</p>
+</details> 
