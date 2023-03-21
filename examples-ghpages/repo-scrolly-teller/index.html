@@ -18,6 +18,10 @@
     }
 
     body {
+      background-image: url('https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/blob/main/static/imgs/ghpages-scrolly-telling/st-1.jpg?raw=true');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       font-family: helvetica, sans-serif;
       margin: 0 0 75vh;
     }
@@ -167,6 +171,11 @@
       // Replace the text content of the .graphic element with the new <img> element
       graphic.innerHTML = '';
       graphic.appendChild(img);
+
+      console.log(index + 1)
+
+      document.body.style.backgroundImage = `url('https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/blob/main/static/imgs/ghpages-scrolly-telling/st-${index + 1}.jpg?raw=true')`;
+
       } else {
       // Create a new <img> element
       const iframe = document.createElement('iframe');
@@ -221,7 +230,7 @@
         	<p>With this experimental containerized web-app you can pick and choose what capabilities you want, or have all of them!</p>
         </div>
 	    </scroll-scene>
-      <scroll-scene>
+      <scroll-scene data-url="">
       	<div>
       		<h2>3</h2>
         	<p>This experimental web-app platform is being developed to accelerate the delivery time for internal facing applications that need various functions including...</p>
