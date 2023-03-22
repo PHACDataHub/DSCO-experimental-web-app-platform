@@ -1,4 +1,4 @@
-# 💡 Tech stack reasoning[^1]
+# 💡 Tech stack reasoning
 
 This document will outline why the specific technologies have been selected to use in the project along with some recognized short-comings of each technology.
 This list is not exhaustive but mainly used to showcase the high level reasoning and highlight the intention used behind each technology.
@@ -15,6 +15,6 @@ This list is not exhaustive but mainly used to showcase the high level reasoning
 
 ## 🔗 [GraphQL](./tech-reasons-graphql.md)
 
-⬅️ [Back to README](../../README.md)
+<br>
 
-[^1]: These documents were created with the assistance of ChatGPT
+⬅️ [Back to README](../../README.md)

@@ -1,4 +1,4 @@
-# 🔗 GraphQL
+# 🔗 GraphQL[^1]
 
 ## ✔️ Reasons to use GraphQL:
 
@@ -21,3 +21,5 @@
 |**Limited support for file uploads**|GraphQL does not have native support for file uploads, which can be challenging for applications that require users to upload large files or complex data structures.|
 
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
+
+[^1]: This document was created with the assistance of ChatGPT

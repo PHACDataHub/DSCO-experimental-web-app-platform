@@ -1,4 +1,4 @@
-# ⚛️ React
+# ⚛️ React[^1]
 
 ## ✔️ Reasons to use React:
 
@@ -21,3 +21,5 @@
 |**Dependency on JavaScript**|React requires clients to have JavaScript enabled in their browsers, which can limit accessibility for users who may not have JavaScript enabled or who are using assistive technologies.|
 
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
+
+[^1]: This document was created with the assistance of ChatGPT

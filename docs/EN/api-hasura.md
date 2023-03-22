@@ -1,6 +1,8 @@
-# Hasura GraphQL API[^1]
+# Hasura GraphQL API
 
 ## Access URL: [http://localhost:8080/console/](http://localhost:8080/console/)
+
+Need more help or information? See their docs [HERE](https://hasura.io/docs/latest/index/)
 
 ### How to get it working:
 1. Start the containers
@@ -18,5 +20,3 @@
 14. Check out all the Queries and Mutations in the Explorer! 🚀
 
 ⬅️ [Back to APIs](./api-configurations.md)
-
-[^1]: Need more help or information? See their docs [HERE](https://hasura.io/docs/latest/index/)

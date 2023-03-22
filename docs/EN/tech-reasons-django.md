@@ -1,4 +1,4 @@
-# 🐍 Django
+# 🐍 Django[^1]
 
 ## ✔️ Reasons to use Django:
 
@@ -20,3 +20,5 @@
 |**Size**|Django is a large framework and may include many features that are not needed for a particular project, which can add unnecessary complexity and overhead.|
 
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
+
+[^1]: This document was created with the assistance of ChatGPT

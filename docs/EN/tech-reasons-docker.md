@@ -1,4 +1,4 @@
-# 🐳 Docker
+# 🐳 Docker[^1]
 
 ## ✔️ Reasons to use Docker:
 
@@ -20,3 +20,5 @@
 |**Performance**|In some cases, running an application in a Docker container may introduce a performance overhead compared to running it directly on the host operating system.|
 
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
+
+[^1]: This document was created with the assistance of ChatGPT

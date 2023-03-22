@@ -1,4 +1,4 @@
-# 🐘 PostgreSQL
+# 🐘 PostgreSQL[^1]
 
 ## ✔️ Reasons to use PostgreSQL:
 
@@ -21,3 +21,5 @@
 |**Limited support for NoSQL data**|While PostgreSQL does support JSON and other data types, it may not be the best choice for applications that require a NoSQL database with flexible data structures and schemaless design.|
 
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
+
+[^1]: This document was created with the assistance of ChatGPT
