@@ -8,48 +8,11 @@ This repo comes with 3 API endpoints, two into their own containers and one part
 
 Below you'll find the three options along with some additional information about them:
 
-### Django GraphQL API
+### [Django GraphQL API](./api-django-graphene.md)
 
-Access URL: [http://localhost:8000/graphql/](http://localhost:8000/graphql/)
+### [Hasura GraphQL API](./api-hasura.md)
 
-Need more help or information? See their docs [HERE](https://docs.graphene-python.org/projects/django/en/latest/)
-
-How to get it working:
-1. Start the containers and it will be working! 🚀
-
-### Hasura GraphQL API
-
-Access URL: [http://localhost:8080/console/](http://localhost:8080/console/)
-
-Need more help or information? See their docs [HERE](https://hasura.io/docs/latest/index/)
-
-How to get it working:
-1. Start the containers
-2. Navigate to the access URL
-3. On the header bar, navigate to `DATA`
-4. Click `Connect Database` (yellow button next to `Data Manager`)
-6. Enter your desired `Database Display Name` in the appropriate text box
-7. Under `Connect Database Via`, select `Environment Variable`
-8. In the `Environment Variable` text box below, paste in the variable (`PG_DATABASE_URL`)
-9. Click `Connect Database` (yellow button at bottom of form)
-10. Once it's created, click the `public` folder on the left under your database
-11. Click `track` for the database tables that you want to interact with through the API
-12. Repeat steps 10 & 11 until you have all the desired tables under the `public` folder
-13. Navigate back to the `API` tab in the Header
-14. Check out all the Queries and Mutations in the Explorer! 🚀
-
-
-### Postgraphile GraphQL API
-
-Access URL: [http://localhost:8081/graphiql](http://localhost:8081/graphiql)
-
-Need more help or information? See their docs [HERE](https://www.graphile.org/postgraphile/introduction/)
-
-How to get it working:
-1. Start the containers
-2. Restart this container
-> It needs an additional reboot since it reads the database too fast (before the migrations) so it doesn't detect that things have changed
-3. Navigate to the Access URL and check out all the Queries and Mutations in the Explorer! 🚀
+### [Postgraphile GraphQL API](./api-hasura.md)
 
 ## The benefits
 
