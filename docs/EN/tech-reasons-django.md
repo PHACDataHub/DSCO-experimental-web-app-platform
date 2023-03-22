@@ -18,3 +18,5 @@
 |**Flexibility**|Django's conventions and structure may not be suitable for all projects, especially those that require a high level of flexibility or customization.|
 |**Performance**|Django may not be the best choice for applications that require very low latency or very high throughput, as it introduces an additional overhead for request processing and handling.|
 |**Size**|Django is a large framework and may include many features that are not needed for a particular project, which can add unnecessary complexity and overhead.|
+
+⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)

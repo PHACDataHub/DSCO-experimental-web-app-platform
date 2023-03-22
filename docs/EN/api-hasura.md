@@ -1,10 +1,8 @@
-### Hasura GraphQL API
+# Hasura GraphQL API[^1]
 
 ## Access URL: [http://localhost:8080/console/](http://localhost:8080/console/)
 
-Need more help or information? See their docs [HERE](https://hasura.io/docs/latest/index/)
-
-## How to get it working:
+### How to get it working:
 1. Start the containers
 2. Navigate to the access URL
 3. On the header bar, navigate to `DATA`
@@ -18,3 +16,7 @@ Need more help or information? See their docs [HERE](https://hasura.io/docs/late
 12. Repeat steps 10 & 11 until you have all the desired tables under the `public` folder
 13. Navigate back to the `API` tab in the Header
 14. Check out all the Queries and Mutations in the Explorer! 🚀
+
+⬅️ [Back to APIs](./api-configurations.md)
+
+[^1]: Need more help or information? See their docs [HERE](https://hasura.io/docs/latest/index/)

@@ -19,3 +19,5 @@
 |**Lack of official guidelines**|React doesn't have a comprehensive set of official guidelines for best practices or architecture, which can make it more challenging to build a scalable, maintainable codebase.|
 |**Limited server-side rendering support**|React can be more challenging to implement for server-side rendering compared to other libraries or frameworks that have built-in support for it.|
 |**Dependency on JavaScript**|React requires clients to have JavaScript enabled in their browsers, which can limit accessibility for users who may not have JavaScript enabled or who are using assistive technologies.|
+
+⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)

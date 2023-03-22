@@ -19,3 +19,5 @@
 |**Performance**|While PostgreSQL is highly scalable, it may not perform as well as other databases in certain use cases, such as high-speed data ingestion or complex analytics. In some cases, it may require additional optimization or configuration to achieve optimal performance.|
 |**Lack of cloud-native features**|While PostgreSQL is compatible with most cloud providers, it may not have all the features and integrations of cloud-native databases, such as serverless computing or auto-scaling.|
 |**Limited support for NoSQL data**|While PostgreSQL does support JSON and other data types, it may not be the best choice for applications that require a NoSQL database with flexible data structures and schemaless design.|
+
+⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)

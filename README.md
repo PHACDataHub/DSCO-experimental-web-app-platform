@@ -35,7 +35,7 @@ Please refer to the [CONTRIBUTING.md](./CONTRIBUTING.md) to see how we would lik
 
 To configure your IDE, you might want to start with creating a [Python virtual environment](/docs/EN/local-docker-deployment.md#setting-up-python-virtual-environment) and installing the packages from [requirements.txt](/core-api/requirements.txt)
 
-### 📄 License
+## 📄 License
 
 Unless otherwise noted, the source code of this project is covered under Crown Copyright, Government of Canada, and is distributed under the [MIT License](LICENSE).
 
