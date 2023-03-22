@@ -16,7 +16,7 @@ There is a lack of 'starting points' for developers to create full-stack interna
 
 We are trying to solve this issue by providing a full-stack application that be be deployed easily and modularity while still having separated components to allow development on smaller portions of the application at a time.
 
-## ❓ Why did we pick these [technology](/docs/EN/tech-stack-reasons.md) and [tools](/docs/EN/peripheral-tools-reasons.md)?
+## ❓ Why did we pick these [technologies](/docs/EN/tech-stack-reasons.md) and [tools](/docs/EN/peripheral-tools-reasons.md)?
 
 Since this is an experimental tool to test out how technologies and tools can be used, a lot of is it just seeing the art of the possible. That being said, we do have a document outlining some specific reasons why we choose the stack we did along with some recognized short-comings from them.
 
@@ -26,11 +26,9 @@ Since this is an experimental tool to test out how technologies and tools can be
 
 Looking to get started using the repo? Take a look at one of the two deployment methods above! 🚀
 
-## 👀 Checking out all the APIs
+## 👀 Checking out all the [APIs](/docs/EN/api-configurations.md)
 
-This repo comes with 3 APIs out of the box for you to experiment with and test out for your use cases!
-
-You can get more information about the available APIs and how to configure there in the [API Configuration document](/docs/EN/api-configurations.md)
+This repo comes with 3 APIs out of the box for you to experiment with and test out for your use cases! You can get more information about the available APIs and how to configure there in the API Configuration document, linked in the header.
 
 ## 🤓 Want to contribute?
 Please refer to the [CONTRIBUTING.md](./CONTRIBUTING.md) to see how we would like the contributions to be structured 😄
