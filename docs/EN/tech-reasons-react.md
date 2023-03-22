@@ -20,6 +20,8 @@
 |**Limited server-side rendering support**|React can be more challenging to implement for server-side rendering compared to other libraries or frameworks that have built-in support for it.|
 |**Dependency on JavaScript**|React requires clients to have JavaScript enabled in their browsers, which can limit accessibility for users who may not have JavaScript enabled or who are using assistive technologies.|
 
+<br>
+
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
 
 [^1]: This document was created with the assistance of ChatGPT

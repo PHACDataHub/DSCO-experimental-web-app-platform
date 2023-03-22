@@ -19,6 +19,8 @@
 |**Performance**|Django may not be the best choice for applications that require very low latency or very high throughput, as it introduces an additional overhead for request processing and handling.|
 |**Size**|Django is a large framework and may include many features that are not needed for a particular project, which can add unnecessary complexity and overhead.|
 
+<br>
+
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
 
 [^1]: This document was created with the assistance of ChatGPT

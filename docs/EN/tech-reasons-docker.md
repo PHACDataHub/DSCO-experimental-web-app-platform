@@ -19,6 +19,8 @@
 |**Limited use cases**|Docker may not be necessary for all projects, especially smaller projects or those with less complex environments.|
 |**Performance**|In some cases, running an application in a Docker container may introduce a performance overhead compared to running it directly on the host operating system.|
 
+<br>
+
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
 
 [^1]: This document was created with the assistance of ChatGPT

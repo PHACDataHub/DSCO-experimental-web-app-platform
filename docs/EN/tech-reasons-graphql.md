@@ -20,6 +20,8 @@
 |**Caching challenges**|Due to the flexibility of GraphQL queries, caching data on the client side can be more challenging than with REST APIs, which can lead to slower performance and increased server load.|
 |**Limited support for file uploads**|GraphQL does not have native support for file uploads, which can be challenging for applications that require users to upload large files or complex data structures.|
 
+<br>
+
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
 
 [^1]: This document was created with the assistance of ChatGPT

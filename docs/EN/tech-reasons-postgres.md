@@ -20,6 +20,8 @@
 |**Lack of cloud-native features**|While PostgreSQL is compatible with most cloud providers, it may not have all the features and integrations of cloud-native databases, such as serverless computing or auto-scaling.|
 |**Limited support for NoSQL data**|While PostgreSQL does support JSON and other data types, it may not be the best choice for applications that require a NoSQL database with flexible data structures and schemaless design.|
 
+<br>
+
 ⬅️ [Back to Tech Reasons](./tech-stack-reasons.md)
 
 [^1]: This document was created with the assistance of ChatGPT
