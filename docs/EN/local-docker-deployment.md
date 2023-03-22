@@ -45,19 +45,19 @@ pip install virtualenv
 Clone or download this repository and open it in your editor of choice. In a terminal (mac/linux) or windows terminal, run the following command in the base directory of this project
 
 ```
-python -m venv venv
+python -m venv .venv
 ```
 
-That will create a new folder `venv` in your project directory. Next activate it with this command on mac/linux:
+That will create a new folder `.venv` in your project directory. Next activate it with this command on mac/linux:
 
 ```
-source venv/bin/activate
+. .venv/Scripts/activate
 ```
 
 Then install the project dependencies with
 
 ```
-pip install -r /core-api/requirements.txt
+pip install -r ./core-api/requirements.txt
 ```
 
 ⬅️ [Back to README](../../README.md)
