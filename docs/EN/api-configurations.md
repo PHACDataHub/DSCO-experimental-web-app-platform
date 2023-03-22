@@ -12,12 +12,16 @@ Below you'll find the three options along with some additional information about
 
 Access URL: [http://localhost:8000/graphql/](http://localhost:8000/graphql/)
 
+Need more help or information? See their docs [HERE](https://docs.graphene-python.org/projects/django/en/latest/)
+
 How to get it working:
 1. Start the containers and it will be working! 🚀
 
 ### Hasura GraphQL API
 
 Access URL: [http://localhost:8080/console/](http://localhost:8080/console/)
+
+Need more help or information? See their docs [HERE](https://hasura.io/docs/latest/index/)
 
 How to get it working:
 1. Start the containers
@@ -34,9 +38,12 @@ How to get it working:
 13. Navigate back to the `API` tab in the Header
 14. Check out all the Queries and Mutations in the Explorer! 🚀
 
+
 ### Postgraphile GraphQL API
 
 Access URL: [http://localhost:8081/graphiql](http://localhost:8081/graphiql)
+
+Need more help or information? See their docs [HERE](https://www.graphile.org/postgraphile/introduction/)
 
 How to get it working:
 1. Start the containers
