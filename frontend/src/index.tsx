@@ -8,10 +8,12 @@ import { ChakraProvider } from '@chakra-ui/react';
 import theme from './theme/theme';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
+const DjangoGrapheneAPI = "http://localhost:8000/graphql/"
+const HasuraAPI = "http://localhost:8080/v1/graphql"
+
 
 const client = new ApolloClient({
 	cache: new InMemoryCache(),
-	uri: "http://localhost:8000/graphql/"
   });
 
 ReactDOM.render(

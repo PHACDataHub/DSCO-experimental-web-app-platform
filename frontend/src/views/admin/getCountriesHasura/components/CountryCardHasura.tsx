@@ -12,7 +12,7 @@ import { MdMap } from "react-icons/md";
 import IconBox from "components/icons/IconBox";
 import Card from "components/card/Card";
 
-type SetItemProps = {
+type SetItemProps1 = {
   country_code: string;
   country_name: string;
   startContent?: JSX.Element;
@@ -20,12 +20,12 @@ type SetItemProps = {
   growth?: string | number;
 };
 
-export default function CountryCard({
+export default function CountryCardHasura({
   country_code,
   country_name,
   startContent,
   growth,
-}: SetItemProps) {
+}: SetItemProps1) {
   const brandColor = useColorModeValue("brand.500", "white");
   const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
   const textColor = useColorModeValue("secondaryGray.900", "white");
@@ -33,7 +33,8 @@ export default function CountryCard({
 
   return (
     <>
-      <Card py="15px">
+
+     <Card py="15px" >
         <Flex
           my="auto"
           h="100%"
@@ -77,7 +78,7 @@ export default function CountryCard({
             ) : null}
           </Stat>
         </Flex>
-      </Card>
+      </Card> 
     </>
   );
 }
