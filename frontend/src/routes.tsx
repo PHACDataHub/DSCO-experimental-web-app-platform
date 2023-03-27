@@ -14,6 +14,7 @@ import NFTMarketplace from "views/admin/marketplace";
 import Profile from "views/admin/profile";
 import DataTables from "views/admin/dataTables";
 import GetCountries from "views/admin/getCountries";
+import GetCountriesHasura from "views/admin/getCountriesHasura"
 
 // Auth Imports
 import SignInCentered from "views/auth/signIn";
@@ -77,6 +78,14 @@ const routes = [
     icon: <Icon as={MdApi} width="20px" height="20px" color="inherit" />,
     component: GetCountries,
   },
+  {
+    name: "GET Hasura Countries",
+    layout: "/admin",
+    path: "/get-hasura-countries",
+    icon: <Icon as={MdApi} width="20px" height="20px" color="inherit" />,
+    component: GetCountriesHasura,
+  },
+ 
 ];
 
 export default routes;
