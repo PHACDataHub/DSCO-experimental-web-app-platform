@@ -174,4 +174,4 @@ class Mutation(graphene.ObjectType):
     add_city = AddCity.Field()
     delete_city = DeleteCity.Field()
 
-schema = graphene.Schema(query=Query, mutation=Mutation,auto_camelcase=False)
+schema = graphene.Schema(query=Query, mutation=Mutation, auto_camelcase=False)
