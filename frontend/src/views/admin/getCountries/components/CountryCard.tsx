@@ -33,7 +33,7 @@ export default function CountryCard({
 
   return (
     <>
-      <Card py="15px">
+      <Card py="15px" key={country_code}>
         <Flex
           my="auto"
           h="100%"
