@@ -5,7 +5,8 @@ services:
   db:
     image: postgres
     stop_signal: SIGTERM
-    stop_grace_period: 20s # https://docs.docker.com/compose/compose-file/compose-file-v2/#stop_grace_period
+    # https://docs.docker.com/compose/compose-file/compose-file-v2/#stop_grace_period
+    stop_grace_period: 20s
     ports:
       - '5432'
     env_file:
@@ -51,7 +52,17 @@ services:
       - 8081:8081
     depends_on:
       - db
-    command: ["--connection", "${DATABASE_URL}", "--port", "8081", "--schema", "public", "--append-plugins", "postgraphile-plugin-connection-filter", "--enhance-graphiql"]
+    command: [
+      "--connection",
+      "${DATABASE_URL}",
+      "--port",
+      "8081",
+      "--schema",
+      "public",
+      "--append-plugins",
+      "postgraphile-plugin-connection-filter",
+      "--enhance-graphiql"
+    ]
 
   graphql-hasura:
     image: hasura/graphql-engine:v2.20.0

@@ -5,51 +5,72 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='City',
+            name="City",
             fields=[
-                ('city_id', models.AutoField(primary_key=True, serialize=False)),
-                ('city_name', models.TextField(default=None)),
-                ('city_countrycode', models.CharField(max_length=3)),
-                ('city_district', models.TextField(default=None)),
-                ('city_population', models.IntegerField()),
+                ("city_id", models.AutoField(primary_key=True, serialize=False)),
+                ("city_name", models.TextField(default=None)),
+                ("city_countrycode", models.CharField(max_length=3)),
+                ("city_district", models.TextField(default=None)),
+                ("city_population", models.IntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='Country',
+            name="Country",
             fields=[
-                ('country_code', models.CharField(max_length=3, primary_key=True, serialize=False)),
-                ('country_name', models.TextField(default=None)),
-                ('country_continent', models.TextField(default=None)),
-                ('country_region', models.TextField(default=None)),
-                ('country_surfacearea', models.FloatField(default=None)),
-                ('country_indepyear', models.SmallIntegerField(null=True)),
-                ('country_population', models.IntegerField(default=None)),
-                ('country_lifeexpectancy', models.FloatField(null=True)),
-                ('country_localname', models.TextField(default=None)),
-                ('country_governmentform', models.TextField(default=None)),
-                ('country_headofstate', models.TextField(blank=True, null=True)),
-                ('country_code2', models.CharField(default=None, max_length=2)),
-                ('country_capital', models.ForeignKey(db_column='country_capital', default=None, null=True, on_delete=django.db.models.deletion.CASCADE, to='backend.city')),
+                (
+                    "country_code",
+                    models.CharField(max_length=3, primary_key=True, serialize=False),
+                ),
+                ("country_name", models.TextField(default=None)),
+                ("country_continent", models.TextField(default=None)),
+                ("country_region", models.TextField(default=None)),
+                ("country_surfacearea", models.FloatField(default=None)),
+                ("country_indepyear", models.SmallIntegerField(null=True)),
+                ("country_population", models.IntegerField(default=None)),
+                ("country_lifeexpectancy", models.FloatField(null=True)),
+                ("country_localname", models.TextField(default=None)),
+                ("country_governmentform", models.TextField(default=None)),
+                ("country_headofstate", models.TextField(blank=True, null=True)),
+                ("country_code2", models.CharField(default=None, max_length=2)),
+                (
+                    "country_capital",
+                    models.ForeignKey(
+                        db_column="country_capital",
+                        default=None,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="backend.city",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='CountryLanguage',
+            name="CountryLanguage",
             fields=[
-                ('countrylanguage_countrycode', models.OneToOneField(db_column='countrylanguage_countrycode', on_delete=django.db.models.deletion.CASCADE, primary_key=True, serialize=False, to='backend.country')),
-                ('countrylanguage_language', models.TextField(default=None)),
-                ('countrylanguage_isofficial', models.BooleanField(default=None)),
-                ('countrylanguage_percentage', models.FloatField(default=None)),
+                (
+                    "countrylanguage_countrycode",
+                    models.OneToOneField(
+                        db_column="countrylanguage_countrycode",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        primary_key=True,
+                        serialize=False,
+                        to="backend.country",
+                    ),
+                ),
+                ("countrylanguage_language", models.TextField(default=None)),
+                ("countrylanguage_isofficial", models.BooleanField(default=None)),
+                ("countrylanguage_percentage", models.FloatField(default=None)),
             ],
             options={
-                'unique_together': {('countrylanguage_countrycode', 'countrylanguage_language')},
+                "unique_together": {
+                    ("countrylanguage_countrycode", "countrylanguage_language")
+                },
             },
         ),
     ]

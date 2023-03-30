@@ -1,0 +1,54 @@
+steps:
+  # Build db image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/db:$COMMIT_SHA', '-f', 'docker-compose.yml', '--target', 'db', '.']
+
+  # Build pgadmin image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/pgadmin:$COMMIT_SHA', '-f', 'docker-compose.yml', '--target', 'pgadmin', '.']
+
+  # Build core-api image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/core-api:$COMMIT_SHA', '-f', 'docker-compose.yml', '--target', 'core-api', '.']
+
+  # Build graphql-postgraphile image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/graphql-postgraphile:$COMMIT_SHA', '-f', 'docker-compose.yml', '--target', 'graphql-postgraphile', '.']
+
+  # Build graphql-hasura image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/graphql-hasura:$COMMIT_SHA', '-f', 'docker-compose.yml', '--target', 'graphql-hasura', '.']
+
+  # Build frontend image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/frontend:$COMMIT_SHA', '-f', 'docker-compose.yml', '--target', 'frontend', '.']
+
+  # Push images to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/db:$COMMIT_SHA']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/pgadmin:$COMMIT_SHA']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/core-api:$COMMIT_SHA']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/graphql-postgraphile:$COMMIT_SHA']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/graphql-hasura:$COMMIT_SHA']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/frontend:$COMMIT_SHA']
+
+images:
+  - 'gcr.io/$PROJECT_ID/db:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/pgadmin:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/core-api:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/graphql-postgraphile:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/graphql-hasura:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/frontend:$COMMIT_SHA'
+
+substitutions:
+  _PROJECT_ID: phx-benbutmir
