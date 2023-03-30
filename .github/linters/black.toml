@@ -1,4 +1,4 @@
 [tool.black]
 line-length = 88
 target-version = ['py38', 'py39']
-config = "config/black.toml"
+config = ".github/linters/black.toml"

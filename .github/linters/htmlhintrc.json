@@ -8,5 +8,5 @@
   "id-unique": true,
   "head-script-disabled": true,
   "style-disabled": true,
-  "config": "./config/htmlhintrc.json"
+  "config": ".github/linters/htmlhintrc.json"
 }

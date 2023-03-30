@@ -27,7 +27,7 @@ module.exports = {
     {
       files: ["*.ts", "*.tsx"],
       parserOptions: {
-        project: "./config/eslintrc.js",
+        project: ".github/linters/eslintrc.js",
       },
     },
   ],
