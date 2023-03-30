@@ -1,3 +1,4 @@
+black
 django
 psycopg2
 graphene_django
