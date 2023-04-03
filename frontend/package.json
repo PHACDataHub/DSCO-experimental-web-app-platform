@@ -2,7 +2,7 @@
 	"homepage": "https://github.com/PHACDataHub/DSCO-experimental-web-app-platform",
 	"name": "dsco-experimental-web-app-platform",
 	"version": "0.1.0-alpha",
-	"private": false,
+	"private": true,
 	"dependencies": {
 		"@apollo/client": "^3.2.2",
 		"@apollo/react-hooks": "^4.0.0",

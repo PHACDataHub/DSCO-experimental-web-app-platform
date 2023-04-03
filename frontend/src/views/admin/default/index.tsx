@@ -77,8 +77,8 @@ export default function UserReports() {
 							<FormLabel htmlFor='balance'>
 								<Avatar src={Can} />
 							</FormLabel>
-							<Select id='balance' variant='mini' mt='5px' me='0px' defaultValue='usd'>
-								<option value='usd'>USD</option>
+							<Select id='balance' variant='mini' mt='5px' me='0px' defaultValue='cad'>
+								<option value='cad'>CAD</option>
 								<option value='eur'>EUR</option>
 								<option value='gba'>GBA</option>
 							</Select>
