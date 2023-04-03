@@ -30,7 +30,7 @@ export default function SidebarDocs() {
 					Check out the following links to see all the things that this webapp can offer you!
 				</Text>
 			</Flex>
-      <VStack spacing={-4}>
+      <VStack spacing={-3}>
         <Link href='http://localhost:8000/admin'>
           <Button
             bg='whiteAlpha.300'
