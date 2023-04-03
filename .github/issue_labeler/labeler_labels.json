@@ -45,77 +45,80 @@
 			"description": "Setting up of DevOps processes e.g. GitHub Actions, Azure DevOps Pipelines etc",
 			"color": "1D76DB"
 		},
-		{
-			"name": ":recycle: QoL: Refactor",
-			"description": "A code quality improvement e.g. Tech debt",
-			"color": "0E8A16"
+    {
+			"name": ":electric_plug: Area: API",
+			"description": "Work related to configuring the API endpoint(s)",
+			"color": "9BEE62"
 		},
 		{
-			"name": ":scroll: Area: Documentation",
+      "name": ":scroll: Area: Documentation",
 			"description": "Updating documentation (e.g. README, Wiki, Guides etc.)",
 			"color": "BABABA"
 		},
 		{
 			"name": ":cloud: Area: Cloud",
 			"description": "Work that involves the Cloud",
-			"color": "#36F4A4"
+			"color": "36F4A4"
 		},
 		{
-			"name": ":octocat: Area: GitHub",
+      "name": ":octocat: Area: GitHub",
 			"description": "Work that pertains to improving the repo's use of GitHub's pre-existing offerings",
-			"color": "#1d76db"
+			"color": "1d76db"
 		},
 		{
-			"name": ":pencil2: Area: Standardization",
+      "name": ":pencil2: Area: Standardization",
 			"description": "Work that improves standardization across GitHub repos",
-			"color": "#1EA94E"
+			"color": "1EA94E"
 		},
 		{
-			"name": ":whale: Area: Docker",
+      "name": ":whale: Area: Docker",
 			"description": "Work that pertains to Docker",
-			"color": "#1B836E"
+			"color": "1B836E"
 		},
 		{
-			"name": "CAF Primary: Administration",
+      "name": "CAF Primary: Administration",
 			"description": "",
 			"color": "E6E6E6"
 		},
 		{
-			"name": "CAF Primary: Change Management Program",
+      "name": "CAF Primary: Change Management Program",
 			"description": "",
 			"color": "FBCA04"
 		},
 		{
-			"name": "CAF Primary: Cloud Operating Model",
+      "name": "CAF Primary: Cloud Operating Model",
 			"description": "",
 			"color": "D93F0B"
 		},
 		{
-			"name": "CAF Primary: People",
+      "name": "CAF Primary: People",
 			"description": "",
 			"color": "5319E7"
 		},
 		{
-			"name": "CAF Primary: Process",
+      "name": "CAF Primary: Process",
 			"description": "",
 			"color": "0052CC"
 		},
 		{
-			"name": "CAF Primary: Security",
+      "name": "CAF Primary: Security",
 			"description": "",
 			"color": "B60205"
 		},
 		{
-			"name": "CAF Primary: Technology",
+      "name": "CAF Primary: Technology",
 			"description": "",
 			"color": "1D76DB"
 		},
 		{
-			"name": "CAF Primary: Training / Communication",
+      "name": "CAF Primary: Training / Communication",
 			"description": "",
 			"color": "0E8A16"
-		}
-	],
-	"token": "<GITHUB_TOKEN>",
-	"owner": "<GITHUB_OWNER>"
+		},
+    {
+      "name": ":recycle: QoL: Refactor",
+      "description": "A code quality improvement e.g. Tech debt",
+      "color": "0E8A16"
+    }
+	]
 }

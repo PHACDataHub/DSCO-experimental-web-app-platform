@@ -1,0 +1,3 @@
+https://github.com/Zebiano/Labeler
+
+labeler -t [TOKEN] -o [OWNER] -r [REPOSITORY] -du

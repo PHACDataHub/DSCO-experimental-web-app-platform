@@ -30,6 +30,10 @@ Looking to get started using the repo? Take a look at one of the two deployment 
 
 This repo comes with 3 APIs out of the box for you to experiment with and test out for your use cases! You can get more information about the available APIs and how to configure there in the API Configuration document, linked in the header.
 
+## ❗ Troubleshooting issues
+
+You can take a look at some common errors and fixes in our [troubshooting document](./docs/EN/troubleshooting.md)
+
 ## 🤓 Want to contribute?
 Please refer to the [CONTRIBUTING.md](./CONTRIBUTING.md) to see how we would like the contributions to be structured 😄
 
