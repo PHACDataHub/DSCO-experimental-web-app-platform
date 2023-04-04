@@ -18,8 +18,9 @@ export default function CountriesQueryFetch() {
         <p>Select API: </p>
         <Select
           placeholder="Select option"          
-          onChange={(e) => {
-            setDisplay(e.target.value);
+          onChange={(event:any) => {
+            
+            setDisplay(event.target.value);
           }}
           w="250px"
         >

@@ -131,8 +131,8 @@ export default function FilterCards() {
         <p>Filter by Country : </p>
         <Select
           placeholder="Select Country Name"
-          onChange={(e) => {
-            setSelectedCountry(e.target.value);
+          onChange={(event:any) => {
+            setSelectedCountry(event.target.value);
           }}
           w="400px"
         >
@@ -161,7 +161,7 @@ export default function FilterCards() {
         filter={selectedCountryName}
         country_code={selectedCountryCode}
         country_name={selectedCountryName}
-        key={selectedCountryCode}
+        key={selectedCountryName}
       />
     </>
   );

@@ -1,14 +1,15 @@
-import { useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
 
 // Chakra imports
 import { HStack, Select, SimpleGrid } from "@chakra-ui/react";
 
-import CountryCard from "../CountryCard";
+import { ApolloCache, ApolloQueryResult, DocumentNode, ObservableQuery, gql, useQuery, Cache } from "@apollo/client";
 
-const hasuraEndpoint = "http://localhost:8080/v1/graphql";
+import CountryCard from "../CountryCard";
+import AddCountryButton from "../AddCountryButton";
 
 // query is the query create
-const query = `
+export const GETALLCOUNTRIES = gql`
 {
   backend_country(order_by: {country_name: asc}) {
     country_name
@@ -16,12 +17,6 @@ const query = `
   }
 }
 `;
-
-const opts = {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ query }),
-};
 
 type SetItemProps = {
   country_name: string;
@@ -33,30 +28,23 @@ type SetItemProps = {
 };
 
 function GetAllCountryCardsHasura({ filter }: SetItemProps) {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const { loading, error, data } = useQuery(GETALLCOUNTRIES);
 
-  useEffect(() => {
-    setLoading(true);
-    fetch(hasuraEndpoint, opts)
-      .then((response) => response.json())
-      .then(setData)
-      .then(() => setLoading(false))
-      .catch(setError);
-  }, []);
+  // useEffect(() => {    
+  //   console.log(data);
+  // }, []);
 
   if (loading) return <h1>Loading...</h1>;
   if (error) return <pre>{JSON.stringify(error)}</pre>;
   if (!data) return null;
 
-  const viewAllItems = data.data.backend_country.map(
+  const viewAllItems = data.backend_country.map(
     (itemItems: { country_name: any; country_code: any }) => {
       return <CountryCard key={itemItems.country_code} {...itemItems} />;
     }
   );
 
-  const viewFilteredItem = data.data.backend_country
+  const viewFilteredItem = data.backend_country
     .filter(
       (itemItems: { country_name: string }) => itemItems.country_name === filter
     )
@@ -84,7 +72,6 @@ function GetAllCountryCardsHasura({ filter }: SetItemProps) {
         >
           {/* If the drop down is empty then the filter prop has the value of {""} */}
           {/* If fitler props does not = "", the filter will apply and only show the selected countryName */}
-
           {viewFilteredItem}
         </SimpleGrid>
       </>
@@ -99,45 +86,39 @@ function GetAllCountryCardsHasura({ filter }: SetItemProps) {
       >
         {/* If the drop down is empty then the filter prop has the value of {""} */}
         {/* If fitler props = "" then this will display all cards. If filter prop is given a countryName, then the filter will apply and only show the selected countryName */}
-
         {viewAllItems}
       </SimpleGrid>
     </>
   );
 }
 
-export default function FilterCardsHasura() {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+export default function CountrySelector() {
   const [selectedCountryName, setSelectedCountry] = useState("");
   const [selectedCountryCode] = useState("");
 
-  useEffect(() => {
-    setLoading(true);
-    fetch(hasuraEndpoint, opts)
-      .then((response) => response.json())
-      .then(setData)
-      .then(() => setLoading(false))
-      .catch(setError);
-    // console.log(data);
-  }, []);
+  const { loading, error, data } = useQuery(GETALLCOUNTRIES);
 
+  // useEffect(() => {    
+  //   console.log(data);
+  // }, []);
+    
   if (loading) return <h1>Loading...</h1>;
   if (error) return <pre>{JSON.stringify(error)}</pre>;
   if (!data) return null;
+
+
   return (
     <>
       <HStack>
         <p>Filter by Country : </p>
         <Select
           placeholder="Select Country Name"
-          onChange={(e) => {
-            setSelectedCountry(e.target.value);
+          onChange={(event:any) => {
+            setSelectedCountry(event.target.value);
           }}
           w="400px"
         >
-          {data.data.backend_country.map(
+          {data.backend_country.map(
             (itemItems: { country_name: any; country_code: any }) => (
               <option
                 key={itemItems.country_code}
@@ -154,7 +135,8 @@ export default function FilterCardsHasura() {
           )}
         </Select>
 
-        <p> Count : {data.data.backend_country.length} </p>
+        <p> Total Countries : {data.backend_country.length} </p>
+        <AddCountryButton />
       </HStack>
       <br />
       <hr />
