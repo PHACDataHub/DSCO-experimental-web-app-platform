@@ -91,7 +91,7 @@ const ADD_COUNTRY = gql`
   }
 `;
 
-function APIAddCountryButton() {
+export default function AddCountryButton() {
   // API useMutation Consts
   const { loading, error, data } = useQuery(GET_DATA);
   const [
@@ -119,9 +119,10 @@ function APIAddCountryButton() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [overlay, setOverlay] = React.useState(<OverlayOne />);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+
+  // useEffect(() => {
+  //   console.log(data);
+  // }, [data]);
 
   if (error) return <pre>{JSON.stringify(error)}</pre>;
   if (loading) return <p>Loading</p>;
@@ -185,7 +186,6 @@ function APIAddCountryButton() {
               />
 
               <FormLabel htmlFor="country_continent">
-                {" "}
                 country_continent :
               </FormLabel>
               <Input
@@ -337,14 +337,4 @@ function APIAddCountryButton() {
     </>
   );
 }
-export default function AddCountryButton() {
-  return (
-    <>
-      <br />
-      <br />
-      <br />
-      <br />
-      <APIAddCountryButton />
-    </>
-  );
-}
+

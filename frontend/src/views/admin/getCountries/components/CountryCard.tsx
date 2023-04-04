@@ -7,10 +7,12 @@ import {
   StatLabel,
   StatNumber,
   useColorModeValue,
+  HStack,
 } from "@chakra-ui/react";
 import { MdMap } from "react-icons/md";
 import IconBox from "components/icons/IconBox";
 import Card from "components/card/Card";
+import APIDeleteCountryButton from './DeleteCountryButton'
 
 type SetItemProps = {
   country_code: string;
@@ -48,6 +50,7 @@ export default function CountryCard({
           />
 
           <Stat my="auto" ms={startContent ? "18px" : "0px"}>
+            <HStack justify={"space-between"}>
             <StatLabel
               lineHeight="100%"
               color={textColorSecondary}
@@ -57,6 +60,8 @@ export default function CountryCard({
             >
               {country_code}
             </StatLabel>
+            <APIDeleteCountryButton country_name={country_name} />
+            </HStack>
             <StatNumber
               color={textColor}
               fontSize={{

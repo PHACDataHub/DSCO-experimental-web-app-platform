@@ -30,9 +30,9 @@ type SetItemProps = {
 function GetAllCountryCardsHasura({ filter }: SetItemProps) {
   const { loading, error, data } = useQuery(GETALLCOUNTRIES);
 
-  useEffect(() => {    
-    console.log(data);
-  }, []);
+  // useEffect(() => {    
+  //   console.log(data);
+  // }, []);
 
   if (loading) return <h1>Loading...</h1>;
   if (error) return <pre>{JSON.stringify(error)}</pre>;
@@ -92,30 +92,16 @@ function GetAllCountryCardsHasura({ filter }: SetItemProps) {
   );
 }
 
-export default function Test() {
+export default function CountrySelector() {
   const [selectedCountryName, setSelectedCountry] = useState("");
   const [selectedCountryCode] = useState("");
 
   const { loading, error, data } = useQuery(GETALLCOUNTRIES);
 
-  useEffect(() => {    
-    console.log(data);
-  }, []);
-  
-interface RefetchQueriesOptions<
-  TCache extends ApolloCache<any>,
-  TResult = Promise<ApolloQueryResult<any>>,
-> {
-  updateCache?: (cache: TCache) => void;
-  include?: Array<string | DocumentNode> | "all" | "active";
-  onQueryUpdated?: (
-    observableQuery: ObservableQuery<any>,
-    diff: Cache.DiffResult<any>,
-    lastDiff: Cache.DiffResult<any> | undefined,
-  ) => boolean | TResult;
-  optimistic?: boolean;
-}
-  
+  // useEffect(() => {    
+  //   console.log(data);
+  // }, []);
+    
   if (loading) return <h1>Loading...</h1>;
   if (error) return <pre>{JSON.stringify(error)}</pre>;
   if (!data) return null;
@@ -152,14 +138,14 @@ interface RefetchQueriesOptions<
         <p> Total Countries : {data.backend_country.length} </p>
         <AddCountryButton />
       </HStack>
-      {/* <br /> */}
+      <br />
       <hr />
       <br />
       <GetAllCountryCardsHasura
         filter={selectedCountryName}
         country_code={selectedCountryCode}
         country_name={selectedCountryName}
-        key={selectedCountryCode}
+        key={selectedCountryName}
       />
     </>
   );

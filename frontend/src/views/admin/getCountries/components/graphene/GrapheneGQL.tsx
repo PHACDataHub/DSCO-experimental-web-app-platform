@@ -161,7 +161,7 @@ export default function FilterCards() {
         filter={selectedCountryName}
         country_code={selectedCountryCode}
         country_name={selectedCountryName}
-        key={selectedCountryCode}
+        key={selectedCountryName}
       />
     </>
   );
