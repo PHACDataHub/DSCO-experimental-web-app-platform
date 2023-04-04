@@ -9,7 +9,7 @@ import CountryCard from "../CountryCard";
 import AddCountryButton from "../AddCountryButton";
 
 // query is the query create
-const query = gql`
+export const GETALLCOUNTRIES = gql`
 {
   backend_country(order_by: {country_name: asc}) {
     country_name
@@ -28,7 +28,7 @@ type SetItemProps = {
 };
 
 function GetAllCountryCardsHasura({ filter }: SetItemProps) {
-  const { loading, error, data } = useQuery(query);
+  const { loading, error, data } = useQuery(GETALLCOUNTRIES);
 
   useEffect(() => {    
     console.log(data);
@@ -96,7 +96,7 @@ export default function Test() {
   const [selectedCountryName, setSelectedCountry] = useState("");
   const [selectedCountryCode] = useState("");
 
-  const { loading, error, data } = useQuery(query);
+  const { loading, error, data } = useQuery(GETALLCOUNTRIES);
 
   useEffect(() => {    
     console.log(data);

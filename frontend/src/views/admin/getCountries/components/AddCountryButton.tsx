@@ -11,6 +11,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { MdAdd } from "react-icons/md";
+import { GETALLCOUNTRIES } from "./hasura/HasuraGQL"; 
 
 // DO NOT DELETE
 // These are coming up "Module '"@chakra-ui/react"' has no exported member <modal/modal Type>". These do exsist and work
@@ -96,12 +97,11 @@ function APIAddCountryButton() {
   const [
     createCountry,
     { loading: mutationLoading, error: mutationError, data: mutationData },
-  ] = useMutation(ADD_COUNTRY);
+  ] = useMutation(ADD_COUNTRY, { refetchQueries : [ {query: GETALLCOUNTRIES }]});
   const [country_code, set_country_code] = useState<string>("");
   const [country_code2, set_country_code2] = useState<string>("");
   const [country_continent, set_country_continent] = useState<string>("");
-  const [country_governmentform, set_country_governmentform] =
-    useState<string>("");
+  const [country_governmentform, set_country_governmentform] = useState<string>("");
   const [country_localname, set_country_localname] = useState<string>("");
   const [country_name, set_country_name] = useState<string>("");
   const [country_population, set_country_population] = useState<string>("");
