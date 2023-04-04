@@ -5,5 +5,7 @@
   "cSpell.words": [
     "chakra"
   ],
-  "python.formatting.provider": "black"
+  "python.formatting.provider": "black",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "./frontend/node_modules/typescript/lib"
 }
