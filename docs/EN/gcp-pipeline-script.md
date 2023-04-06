@@ -11,23 +11,23 @@ So we will loop through all the desired services to make separate triggers and u
 ```bash
 export PROJECT_ID="phx-benbutmir"
 export REGION="northamerica-northeast1"
-export SVC_GROUP="simple-gke-infra"
+export REPO_NAME="DSCO-experimental-web-app-platform"
 
 gcloud builds triggers list --region ${REGION}
 
 # Now, in a loop
-for svc in django-time go-time deno-time nginx-site caddy-site; do
+for svc in frontend; do
   gcloud builds triggers create github \
-    --name=${SVC_GROUP}-${svc} \
+    --name=${REPO_NAME}-${svc} \
     --region ${REGION} \
-    --repo-name=simple-gke-infra \
-    --repo-owner=daneroo \
+    --repo-name=${REPO_NAME} \
+    --repo-owner=PHACDataHub \
     --branch-pattern="^main$" \
     --build-config=${svc}/cloudbuild.yaml
 done
 
 # and now delete them all
-for svc in django-time go-time deno-time nginx-site caddy-site; do
+for svc in frontend; do
   gcloud builds triggers delete --region ${REGION} ${SVC_GROUP}-${svc}
 done
 ```
