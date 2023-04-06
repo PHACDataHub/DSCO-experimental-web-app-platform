@@ -18,7 +18,7 @@ We are trying to solve this issue by providing a full-stack application that be 
 
 ## ❓ Why did we pick these [technologies](/docs/EN/tech-stack-reasons.md) and [tools](/docs/EN/peripheral-tools-reasons.md)?
 
-Since this is an experimental tool to test out how technologies and tools can be used, a lot of is it just seeing the art of the possible. That being said, we do have a document outlining some specific reasons why we choose the stack we did along with some recognized short-comings from them.
+Since this is an experimental tool to test out how technologies and tools can be used, a lot of is it just seeing the art of the possible. That being said, we have a document outlining some specific reasons why we choose the stack we did along with some recognized short-comings from them.
 
 ## 👨‍💻 Getting Started
 
