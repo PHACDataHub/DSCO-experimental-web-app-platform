@@ -18,7 +18,7 @@ gcloud builds triggers list --region ${REGION}
 # Now, in a loop
 for svc in frontend; do
   gcloud builds triggers create github \
-    --name=${REPO_NAME}-${svc} \
+    --name=scripted-push-to-${REPO_NAME}-${svc} \
     --region ${REGION} \
     --repo-name=${REPO_NAME} \
     --repo-owner=PHACDataHub \

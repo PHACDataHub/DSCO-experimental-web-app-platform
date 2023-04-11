@@ -11,8 +11,10 @@ assignees: ''
 
 As a USER, I want SOMETHING, so that I can RESULT
 
+```[tasklist]
 ### ✔️ Tasks
 - [ ] [TSK] -
+```
 
 ### ⛔ Dependencies
 

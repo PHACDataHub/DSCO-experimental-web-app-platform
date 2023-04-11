@@ -19,6 +19,7 @@ steps:
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
+    # TODO: Check Cloud Build to Cloud Run permissions, test running manually from cloudshell
     args:
       - "run"
       - "deploy"
