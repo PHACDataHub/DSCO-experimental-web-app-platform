@@ -1,0 +1,20 @@
+# Installing Frontend
+FROM node:current-alpine3.16
+WORKDIR /app
+COPY ./package*.json ./
+
+# Defines the dev environment and allow live-reload
+ENV NODE_ENV='development'
+ENV WDS_SOCKET_PORT=3000
+ENV CHOKIDAR_USEPOLLING=true
+ENV WATCHPACK_POLLING=true
+
+# Installs dependencies
+RUN npm ci
+
+# Copies over folders/files
+COPY . .
+
+# TODO: Multistage build with nginx
+EXPOSE 3000
+CMD ["npm", "start"]

@@ -52,6 +52,7 @@ services:
       - 8081:8081
     depends_on:
       - db
+    restart: always
     command: [
       "--connection",
       "${DATABASE_URL}",
@@ -75,11 +76,12 @@ services:
 
   frontend:
     stdin_open: true
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
-      - "/app/node_modules"
       - "./frontend/:/app"
     depends_on:
       - db
