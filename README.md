@@ -22,6 +22,12 @@ Since this is an experimental tool to test out how technologies and tools can be
 
 ## 👨‍💻 Getting Started
 
+### [Live Demo](https://frontend-5wzpcugyza-nn.a.run.app)
+
+Currently there is a live demo of the application hosted on HC-PHAC GCP Sandbox space.
+
+> NOTE: The application is very unstable and heavily under development and therefore functionality may not be guaranteed
+
 ### [GitHub Codespace](/docs/EN/github-codespace-deployment.md) or [Local Docker](/docs/EN/local-docker-deployment.md)
 
 Looking to get started using the repo? Take a look at one of the two deployment methods above! 🚀
