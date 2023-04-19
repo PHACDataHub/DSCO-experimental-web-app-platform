@@ -1,18 +1,5 @@
 #!/bin/bash
 
-# Define options for each service
-database_options=("PostgreSQL")
-database_selection_service_name=("db")
-
-orm_options=("Python / Django")
-orm_selection_service_name=("core-api")
-
-api_options=("GraphQL / Hasura" "GraphQL / Python-Django-Graphene"  "GraphQL / Postgraphile")
-api_selection_service_name=("graphql-hasura" "core-api"  "graphql-postgraphile")
-
-frontend_options=("TypeScript / React" "Python / Django" )
-frontend_selection_service_name=("frontend" "core-api" )
-
 # Define function to select options
 # Renders a text based list of options that can be selected by the
 # user using up, down and enter keys and returns the chosen option.
@@ -78,6 +65,7 @@ function select_option {
     return $selected
 }
 
+
 function select_opt {
     select_option "$@" 1>&2
     local result=$?
@@ -85,34 +73,89 @@ function select_opt {
     return $result
 }
 
-# Select options for each service
-services=()
+
+function select_containers {
+  # Define options for each service
+  database_options=("PostgreSQL")
+  database_selection_service_name=("db")
+
+  orm_options=("Python / Django")
+  orm_selection_service_name=("core-api")
+
+  api_options=("GraphQL / Hasura" "GraphQL / Python-Django-Graphene"  "GraphQL / Postgraphile")
+  api_selection_service_name=("graphql-hasura" "core-api"  "graphql-postgraphile")
+
+  frontend_options=("TypeScript / React" "Python / Django" )
+  frontend_selection_service_name=("frontend" "core-api" )
+
+  # Array to store the container service names
+  container_services=()
+
+  echo "Please follow the prompts to select which container you would like for each service."
+
+  # Select options for each service
+  echo "Select Database:"
+  case `select_opt "${database_options[@]}"` in
+      *) container_services+=(${database_selection_service_name[$?]});;
+  esac
+
+  echo "Select ORM:"
+  case `select_opt "${orm_options[@]}"` in
+      *) container_services+=(${orm_selection_service_name[$?]});;
+  esac
+
+  echo "Select API:"
+  case `select_opt "${api_options[@]}"` in
+      *) container_services+=(${api_selection_service_name[$?]});;
+  esac
+
+  echo "Select Frontend:"
+  case `select_opt "${frontend_options[@]}"` in
+      *) container_services+=(${frontend_selection_service_name[$?]});;
+  esac
+
+  echo "Starting selected containers ..."
+
+  docker compose up --build -d "${container_services[@]}"
+}
+
+
+function select_service_offering {
+  # Define options for each service
+  service_offerings=(
+    "Database ONLY"
+    "Database and API"
+    "Database, ORM, and API"
+    "Database, ORM, API, and Frontend"
+  )
+
+  # Defines the OPTIMAL containers for each service offering
+  service_offerings_containers=(
+    "db"
+    "db graphql-hasura"
+    "db core-api graphql-hasura"
+    "db core-api graphql-hasura frontend"
+  )
+
+  echo "Select Service Offering:"
+  case `select_opt "${service_offerings[@]}"` in
+      *) container_services=${service_offerings_containers[$?]};;
+  esac
+
+  echo "Starting selected service offering ..."
+
+  docker compose up --build -d ${container_services}
+}
+
+build_type=("I would like to select a service offering" "I would like to pick and choose each container")
 
 echo""
 echo "You will now be selecting what build you would like."
 echo "Please select your stack by going through the prompts or exiting with CTRL+C"
 echo ""
 
-echo "Select Database:"
-case `select_opt "${database_options[@]}"` in
-    *) services+=(${database_selection_service_name[$?]});;
+echo "Would you like to pick a service offering or each container?"
+case `select_opt "${build_type[@]}"` in
+    0) select_service_offering;;
+    1) select_containers;;
 esac
-
-echo "Select ORM:"
-case `select_opt "${orm_options[@]}"` in
-    *) services+=(${orm_selection_service_name[$?]});;
-esac
-
-echo "Select API:"
-case `select_opt "${api_options[@]}"` in
-    *) services+=(${api_selection_service_name[$?]});;
-esac
-
-echo "Select Frontend:"
-case `select_opt "${frontend_options[@]}"` in
-    *) services+=(${frontend_selection_service_name[$?]});;
-esac
-
-echo "Starting selected containers ..."
-
-docker compose up --build -d "${services[@]}"
