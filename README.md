@@ -8,23 +8,25 @@ This project is under heavy development and is not by any means, complete. Due t
 
 ## 📈 Project Management and Tracker
 
-This [GitHub Project](https://github.com/orgs/PHACDataHub/projects/10/views/2) is current for DSCO in general although this will encompass the DSCO-experimental-web-app-platform
+The EPIC for this work can be found at [this GitHub issue](https://github.com/PHACDataHub/DSCO-task-tracker-repo/issues/81)
+
+This EPIC is being tracked by the [DSCO's GitHub Project](https://github.com/orgs/PHACDataHub/projects/10/views/2) in general although this will encompass more than just the DSCO-experimental-web-app-platform.
 
 ## 🤔 Problem statement that we are trying to solve
 
 There is a lack of 'starting points' for developers to create full-stack internal applications and therefore the code quality, standardization, optimization, and efficiency are all drastically reduced.
 
-We are trying to solve this issue by providing a full-stack application that be be deployed easily and modularity while still having separated components to allow development on smaller portions of the application at a time.
+We are trying to solve this issue by providing a full-stack application that be deployed easily and in modularity while still having separated components to allow development on smaller portions of the application at a time.
 
 ## ❓ Why did we pick these [technologies](/docs/EN/tech-stack-reasons.md) and [tools](/docs/EN/peripheral-tools-reasons.md)?
 
-Since this is an experimental tool to test out how technologies and tools can be used, a lot of is it just seeing the art of the possible. That being said, we have a document outlining some specific reasons why we choose the stack we did along with some recognized short-comings from them.
+Since this is an experimental tool to test out how technologies and tools can be used, a lot of is it just seeing the art of the possible. That being said, we have a document outlining some specific reasons why we choose the stack we did along with some recognized shortcomings from them.
 
 ## 👨‍💻 Getting Started
 
 ### [Live Demo](https://frontend-5wzpcugyza-nn.a.run.app)
 
-Currently there is a live demo of the application hosted on HC-PHAC GCP Sandbox space.
+Currently, there is a live demo of the application hosted on HC-PHAC GCP Sandbox space.
 
 > NOTE: The application is very unstable and heavily under development and therefore functionality may not be guaranteed
 
@@ -34,7 +36,7 @@ Looking to get started using the repo? Take a look at one of the two deployment 
 
 ## 👀 Checking out all the [APIs](/docs/EN/api-configurations.md)
 
-This repo comes with 3 APIs out of the box for you to experiment with and test out for your use cases! You can get more information about the available APIs and how to configure there in the API Configuration document, linked in the header.
+This repo comes with 3 APIs out of the box for you to experiment with and test out for your use cases! You can get more information about the available APIs and how to configure these in the API Configuration document, linked in the header.
 
 ## ❗ Troubleshooting issues
 
