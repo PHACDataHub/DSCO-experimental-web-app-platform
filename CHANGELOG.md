@@ -1,5 +1,34 @@
 # Changelog
 
+## [0.2.0-alpha](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/compare/v0.1.0-alpha...v0.2.0-alpha) (2023-08-15)
+
+
+### Features
+
+* **cloud:** added cloudbuild info and files ([#86](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/issues/86)) ([997fa21](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/997fa216f9bd831216fa9a18993bc6d287a40a9d))
+* **cloudbuild:** adding updated cloudbuild files ([b688fa8](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/b688fa8f3e755a09d1c5e120f414f8a3d91b538e))
+* **frontend:** add refetching to add country button ([#85](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/issues/85)) ([4ce7e4f](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/4ce7e4f784b07759c188cad6d17d898c4672f433))
+* **frontend:** create explore countries page. merge hasura and graphene into explore countries page ([#81](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/issues/81)) ([24fc63f](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/24fc63fd59c9483ac932085b0b1cf1a0667972ad))
+* **frontend:** create hasura api call ([#79](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/issues/79)) ([94bc888](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/94bc88836b2bf2d0ff754cb0ccc507ad5ae5bd71))
+* **githubissues:** added tasklist beta to issue templates ([c42dfed](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/c42dfeda7c867a9921a553b9b8194e458add3535))
+* **lint:** added linting stuff and cloud files ([#83](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/issues/83)) ([42a86a6](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/42a86a6c282a0ddcd03270f63bead8e77f261aea))
+* **scripts:** created service container selector script ([885183f](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/885183f5751973593b1d158b5e3da4954c9dd4a8))
+* **scripts:** updated select start script to include service offerings ([b4314c8](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/b4314c8ebc4d0718fe7d4563c299b0ad4d608f38))
+
+
+### Bug Fixes
+
+* **dockerfile:** trying another directory syntax for cloudbuild ([ea964ee](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/ea964eeabc6766b0dcec171b3a9a1b1a8c87adbe))
+* **dockerfile:** updated to fix directory for cloudbuild ([02cc556](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/02cc556d446f66884f18f4e96bba822ec56080aa))
+* **docker:** updated dockerfiles for prod and dev and live-reloading ([5cb3bb6](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/5cb3bb61ae5ffc418151a58eaf986034a4e4d345))
+* **gcp-docker:** exposed post 8080 to fix gcp error ([d5534e1](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/d5534e1606c39c36f570de2c594690407d62e2e2))
+* **packages:** added vscode setting and updated package JSON ([067ae46](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/067ae4650653e82cb6aeb95764e096be6a8b2b3c))
+
+
+### Miscellaneous Chores
+
+* release 0.2.0-alpha ([ab35361](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/ab353618c0030831db51bc7bb5110703fa1f341f))
+
 ## 0.1.0-alpha (2023-03-23)
 
 
