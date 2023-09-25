@@ -10,7 +10,7 @@ This project is under heavy development and is not by any means, complete. Due t
 
 The EPIC for this work can be found at [this GitHub issue](https://github.com/PHACDataHub/DSCO-task-tracker-repo/issues/81)
 
-This EPIC is being tracked by the [DSCO's GitHub Project](https://github.com/orgs/PHACDataHub/projects/10/views/2) in general although this will encompass more than just the DSCO-experimental-web-app-platform.
+This EPIC is being tracked by the [DSCO's GitHub Project](https://github.com/orgs/PHACDataHub/projects/10/views/2) in general although this will encompass more than just this repo.
 
 ## 🤔 Problem statement that we are trying to solve
 

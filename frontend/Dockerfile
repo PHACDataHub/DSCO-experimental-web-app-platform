@@ -6,5 +6,6 @@ RUN npm ci
 COPY . .
 # TODO: Multistage build with nginx
 RUN npm run build
-EXPOSE 8080
+# On GCP the default is 8080 in Cloud Run so this will need to be updated
+EXPOSE 3000
 CMD ["npm", "run", "serve"]

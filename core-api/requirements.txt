@@ -5,4 +5,4 @@ graphene_django
 graphene
 python-decouple
 python-dotenv
-django-cors-headers
+django-cors-headers==3.14.0
