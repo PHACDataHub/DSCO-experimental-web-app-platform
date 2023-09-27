@@ -26,7 +26,7 @@ Since this is an experimental tool to test out how technologies and tools can be
 
 ### [Live Demo](https://frontend-5wzpcugyza-nn.a.run.app)
 
-Currently, there is a live demo of the application hosted on HC-PHAC GCP Sandbox space.
+Currently, there is a live demo of the application hosted on HC-PHAC GCP Experimental & Innovation space.
 
 > NOTE: The application is very unstable and heavily under development and therefore functionality may not be guaranteed
 
