@@ -8,9 +8,9 @@ import { ChakraProvider } from '@chakra-ui/react';
 import theme from './theme/theme';
 import { ApolloClient, ApolloLink, ApolloProvider, HttpLink, InMemoryCache,  } from '@apollo/client';
 
-
-// const DjangoGrapheneAPI = "http://localhost:8000/graphql/" 
-// const HasuraAPI = "http://localhost:8080/v1/graphql" 
+// TODO: Try and connect local frontend to remote backend
+// const DjangoGrapheneAPI = "http://localhost:8000/graphql/"
+// const HasuraAPI = "http://localhost:8080/v1/graphql"
 
 
 const client = new ApolloClient({
