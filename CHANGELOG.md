@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0-alpha](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/compare/v0.2.0-alpha...v0.3.0-alpha) (2023-11-28)
+
+
+### Features
+
+* **hasura:** added GCP deployment files ([#92](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/issues/92)) ([8a95749](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/8a9574932ee5a62976dec78b3580477e551de135))
+
+
+### Bug Fixes
+
+* **docs:** updated version.txt file ([#90](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/issues/90)) ([bf7f43b](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/bf7f43b9d0d597250861b01201ec8a07ec891b68))
+* **TODO:** added TODO item about api endpoint ([be34214](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/commit/be342146777223e033ed12e5bf088b11af6232a5))
+
 ## [0.2.0-alpha](https://github.com/PHACDataHub/DSCO-experimental-web-app-platform/compare/v0.1.0-alpha...v0.2.0-alpha) (2023-08-15)
 
 
